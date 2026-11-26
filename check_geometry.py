@@ -7,7 +7,7 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parent
-URL = "file://" + str(ROOT / "index.html")
+URL = "file://" + str(ROOT / "docs" / "index.html")
 
 
 def rects(page, sel):

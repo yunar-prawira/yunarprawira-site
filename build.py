@@ -17,7 +17,7 @@ from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent
 TEMPLATE = ROOT / "template.html"
-OUT = ROOT / "index.html"
+OUT = ROOT / "docs" / "index.html"
 
 KILAS = "https://kilas.yunarprawira.com"
 FEED = KILAS + "/feed.xml"
@@ -98,6 +98,7 @@ def main() -> int:
     if sisa:
         print(f"gagal: placeholder belum terisi: {sorted(set(sisa))}", file=sys.stderr)
         return 1
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(html_out, encoding="utf-8")
     print(f"built {OUT.name} — {len(edisi)} edisi Kilas, {len(html_out)} byte")
     return 0
