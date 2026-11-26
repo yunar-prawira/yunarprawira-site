@@ -13,6 +13,7 @@ import re
 import sys
 import urllib.request
 from datetime import date
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -51,11 +52,11 @@ def ambil_edisi(limit: int = 3):
         judul = (item.findtext("title") or "").strip()
         link = (item.findtext("link") or "").strip()
         desc = (item.findtext("description") or "").strip()
-        pub = (item.findtext("pubDate") or "")[:16]
+        d = None
         try:
-            d = date.fromisoformat(pub)
-        except ValueError:
-            d = None
+            d = parsedate_to_datetime(item.findtext("pubDate") or "").date()
+        except (TypeError, ValueError):
+            pass
         # "Edisi 26 — judul" -> nomor + judul tanpa prefiks
         m = re.match(r"^Edisi\s+(\d+)\s+—\s+(.*)$", judul)
         nomor, judul_bersih = (m.group(1), m.group(2)) if m else ("", judul)
