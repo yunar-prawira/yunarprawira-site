@@ -8,6 +8,7 @@ hanya karena jaringan).
 from __future__ import annotations
 
 import html
+import hashlib
 import re
 import sys
 import urllib.request
@@ -99,6 +100,8 @@ def main() -> int:
         print(f"gagal: placeholder belum terisi: {sorted(set(sisa))}", file=sys.stderr)
         return 1
     OUT.parent.mkdir(parents=True, exist_ok=True)
+    sig = hashlib.sha256(html_out.encode("utf-8")).hexdigest()[:12]
+    html_out = html_out.replace("</head>", f"<!-- build {sig} -->\n</head>", 1)
     OUT.write_text(html_out, encoding="utf-8")
     print(f"built {OUT.name} — {len(edisi)} edisi Kilas, {len(html_out)} byte")
     return 0
