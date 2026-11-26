@@ -1,4 +1,6 @@
 shot-*.png
 proof-*.png
+live-*.png
+final-*.png
 audit.json
 __pycache__/
