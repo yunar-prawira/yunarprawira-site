@@ -12,17 +12,21 @@ butuh DNS langsung untuk menerbitkan sertifikat).
 
 ## Landing page (`~/yunarprawira-site`)
 
-- `template.html` — satu-satunya berkas desain. Placeholder: `{{EDITIONS}}`, `{{KILAS}}`,
-  `{{PORTFOLIO}}`, `{{EMAIL}}`, `{{TAHUN}}`.
+- `template.html` — satu-satunya berkas desain. Placeholder `{{...}}` diisi `build.py`.
 - `build.py` — mengambil 3 edisi terbaru dari `kilas.yunarprawira.com/feed.xml` saat build,
-  lalu menulis `docs/index.html`. Kalau feed mati, halaman tetap dibangun dengan tautan saja
-  (build tidak boleh gagal karena jaringan).
-- `check_geometry.py` — cek DOM: sebaris/tidaknya elemen, target sentuh ≥44px, overflow
-  horizontal di 1440px dan 390px. Ini yang menangkap kerusakan layout; audit warna tidak.
-- Audit desain: `signature-design` (`audit_run.py`) — lulus 97 (visual 94, alur 100, 0 critical).
+  lalu menulis `docs/index.html` (ID) + `docs/en/index.html` (EN) dan menyalin `assets/` ke
+  `docs/assets/`. Kalau feed mati, halaman tetap dibangun dengan tautan saja.
+- `build_cv.py` — menulis `docs/cv/index.html` dari `cv_source_MASTER_CV.md`.
+- `assets/` — sumber aset (CSS, font woff2, `share.png` 1200x630, PDF CV). Disajikan dari
+  `docs/assets/`, jangan menaut `/assets/` tanpa lewat build.
+- `audit/check-home.py` — **satu pemeriksaan untuk halaman home**: lapis statis (placeholder,
+  satu h1, lang, hreflang, canonical, og:image, JSON-LD, em dash, link MU, klaim vs MASTER_CV)
+  plus lapis geometri dari DOM (tepi kiri ≤4, paragraf pendek tidak pecah, target ≥44px,
+  font ≥13px, tanpa overflow) di 1440/1280/390, dua bahasa. Menyajikan `docs/` sendiri di port
+  acak, jadi tidak butuh server manual. `python3 audit/check-home.py`, exit 1 = ada temuan.
 
 Arah desain: **editorial** (kertas hangat `#FDFCF9`, serif Bitstream Charter, satu aksen
-`#7A2E2E`, garis rambut 1px). Skala font 6 langkah: 11/13/16/20/28/48.
+`#D70015`, Inter untuk body). Skala font 13/15/16/20/24/80.
 
 ### Deploy
 
