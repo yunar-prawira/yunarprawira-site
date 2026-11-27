@@ -1,0 +1,122 @@
+/* Halaman utama yunarprawira.com — satu berkas CSS, dipakai / (ID) dan /en/ (EN). */
+
+@font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;
+  src:url(/assets/fonts/inter-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Inter;font-style:normal;font-weight:600;font-display:swap;
+  src:url(/assets/fonts/inter-latin-600-normal.woff2) format('woff2')}
+
+:root{
+  --bg:#FDFCF9; --ink:#16130F; --muted:#5F574B; --hairline:#E0D9CB; --accent:#D70015;
+  --display:"Bitstream Charter",Charter,"Liberation Serif",Georgia,serif;
+  --body:Inter,"Liberation Sans","DejaVu Sans",Arial,sans-serif;
+  --mono:"DejaVu Sans Mono","Liberation Mono",monospace;
+  --label:13px; --small:15px; --text:16px; --heading:24px; --hero:80px;
+  --unit:4px; --gutter:24px; --section:64px; --measure:82ch;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:var(--text)/1.6 var(--body);
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1008px;margin:auto;padding-inline:var(--gutter)}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:4px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px;
+  border-radius:2px}
+p,h1,h2,h3{margin:0}
+h1,h2,h3{font-family:var(--display);font-weight:400}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--bg);
+  padding:12px 20px;z-index:10}
+.skip:focus{left:8px;top:8px}
+
+/* ---------- masthead ---------- */
+.masthead{border-bottom:1px solid var(--hairline)}
+.masthead .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:8px 24px;padding-block:12px}
+.who,nav,.languages,.meta,.card-meta,footer{font-family:var(--mono);font-size:var(--label)}
+.who{color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;gap:0 24px}
+nav a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding-inline:4px}
+.languages{display:flex;gap:4px}
+.languages a{display:inline-flex;align-items:center;justify-content:center;
+  min-height:44px;min-width:44px;padding:8px;color:var(--muted);
+  border-bottom:2px solid transparent}
+.languages a[aria-current="true"]{border-color:var(--accent);color:var(--ink);font-weight:700}
+.languages a:hover{text-decoration:none;color:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{padding-block:80px 64px}
+h1{font-size:var(--hero);line-height:1.05;letter-spacing:-.04em}
+.role{margin-top:24px;font-size:var(--heading);font-family:var(--display);line-height:1.4}
+.lede{margin-top:24px;max-width:none}
+.lede-2{margin-top:12px;max-width:none;color:var(--muted)}
+
+/* ---------- tombol ---------- */
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  padding:12px 20px;border:1px solid var(--accent);border-radius:2px;
+  font-family:var(--body);font-size:var(--text);font-weight:600;line-height:1.2;
+  color:#FFFFFF;background:var(--accent);cursor:pointer}
+.btn:hover{background:#A80010;border-color:#A80010;text-decoration:none}
+.btn-ghost{background:transparent;color:var(--accent);border-color:var(--hairline)}
+.btn-ghost:hover{background:transparent;border-color:var(--accent);text-decoration:none}
+
+/* ---------- proof strip ---------- */
+section{border-top:1px solid var(--hairline);padding-block:32px var(--section)}
+section.hero{border:0}
+h2{font-size:var(--heading);line-height:1.4}
+.proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;
+  list-style:none;margin:24px 0 0;padding:0}
+.proof li{display:block}
+.proof .val{display:block;font-family:var(--mono);font-size:20px;
+  font-variant-numeric:tabular-nums;color:var(--accent);letter-spacing:-.01em}
+.proof .lbl{display:block;margin-top:4px;font-size:var(--small);color:var(--muted);
+  line-height:1.45;max-width:32ch}
+
+/* ---------- selected work ---------- */
+.work{list-style:none;margin:24px 0 0;padding:0}
+.work li{padding-block:24px;border-bottom:1px solid var(--hairline)}
+.work li:last-child{border-bottom:0;padding-bottom:0}
+.work h3{font-size:var(--heading);line-height:1.4}
+.work .what{margin-top:8px;max-width:none}
+.work .result{margin-top:8px;color:var(--muted);max-width:none}
+.work .result b{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.work .links{margin-top:4px;display:flex;flex-wrap:wrap;gap:0 24px}
+.text-link{display:inline-flex;align-items:center;min-height:44px;
+  color:var(--accent);font-size:var(--small);font-weight:600}
+
+/* ---------- kilas ---------- */
+.daftar-edisi{list-style:none;padding:0;margin:24px 0 0}
+.edisi{padding-block:8px;border-top:1px solid var(--hairline)}
+.edisi-judul{display:inline-flex;align-items:center;min-height:44px;font-family:var(--display);font-size:20px;line-height:1.35}
+.edisi-ringkas{max-width:var(--measure);margin-top:6px;color:var(--muted);font-size:var(--small);
+  line-height:1.5}
+.edisi-meta{display:flex;flex-wrap:nowrap;align-items:baseline;gap:16px;margin-top:2px;
+  font-family:var(--mono);font-size:var(--label);color:var(--muted)}
+.edisi-meta .no{font-variant-numeric:tabular-nums}
+.kosong{margin-top:24px;max-width:var(--measure)}
+
+/* ---------- kontak ---------- */
+.contact p{margin-top:16px;max-width:none}
+.contact .pitch{font-size:var(--heading);font-family:var(--display);line-height:1.4}
+footer{border-top:1px solid var(--hairline);color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;
+  padding-block:24px 40px}
+footer a{display:inline-flex;align-items:center;min-height:44px}
+footer .copyright{margin-right:auto}
+
+@media(max-width:720px){
+  .proof{grid-template-columns:1fr;gap:16px}
+}
+@media(max-width:640px){
+  :root{--gutter:20px;--hero:48px;--section:48px}
+  .masthead .wrap{gap:4px 12px}
+  .who{flex-basis:100%}
+  nav{gap:0 16px}
+  .hero{padding-block:48px}
+  .actions{gap:8px}
+  .btn{flex:1 1 auto;padding:14px 16px}
+}
+@media(prefers-reduced-motion:no-preference){
+  .btn{transition:background-color .15s ease,border-color .15s ease}
+}

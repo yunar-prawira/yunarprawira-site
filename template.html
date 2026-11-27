@@ -1,153 +1,107 @@
 <!doctype html>
-<html lang="id">
+<html lang="{{LANG}}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yunar Prawira | Project management dan implementasi HR</title>
-<meta name="description" content="Implementasi sistem HR, produk AI, dan catatan dari keduanya. Baca Kilas, lihat portfolio, atau hubungi Yunar Prawira.">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
 <meta name="color-scheme" content="light">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://yunarprawira.com/">
-<meta property="og:title" content="Yunar Prawira | Project management dan implementasi HR">
-<meta property="og:description" content="Implementasi sistem HR, produk AI, dan catatan dari keduanya. Baca Kilas, lihat portfolio, atau hubungi Yunar Prawira.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://yunarprawira.com/">
-<meta property="og:locale" content="id_ID">
-<meta name="twitter:card" content="summary">
-<link rel="alternate" type="application/rss+xml" title="Kilas" href="{{KILAS}}/feed.xml">
+<link rel="canonical" href="{{CANONICAL}}">
+<link rel="alternate" hreflang="id" href="https://www.yunarprawira.com/">
+<link rel="alternate" hreflang="en" href="https://www.yunarprawira.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.yunarprawira.com/">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:site_name" content="Yunar Prawira">
+<meta property="og:locale" content="{{OGLOCALE}}">
+<meta property="og:image" content="https://www.yunarprawira.com/assets/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{SHAREALT}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.yunarprawira.com/assets/share.png">
+<link rel="alternate" type="application/rss+xml" title="Kilas" href="https://kilas.yunarprawira.com/feed.xml">
+<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/home.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23D70015' d='M0 0h24v24H0z'/></svg>">
-<style>
-:root{
-  --bg:#FDFCF9; --ink:#16130F; --muted:#6E6659; --hairline:#E0D9CB; --accent:#D70015;
-  --display:"Bitstream Charter",Charter,"Liberation Serif",Georgia,serif;
-  --body:Lato,"Liberation Sans","DejaVu Sans",Arial,sans-serif;
-  --mono:"DejaVu Sans Mono","Liberation Mono",monospace;
-  --label:12px; --small:14px; --text:16px; --heading:24px; --hero:80px;
-  --unit:4px; --gutter:24px; --section:64px; --measure:68ch;
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:auto}
-body{margin:0;background:var(--bg);color:var(--ink);font:var(--text)/1.6 var(--body);-webkit-font-smoothing:antialiased}
-.wrap{max-width:1008px;margin:auto;padding-inline:var(--gutter)}
-a{color:inherit;text-decoration:none}
-a:hover{text-decoration:underline;text-underline-offset:4px}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-p,h1,h2{margin:0}
-h1,h2{font-family:var(--display);font-weight:400}
-.masthead{border-bottom:1px solid var(--hairline)}
-.masthead .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-block:12px}
-.who,nav,.languages,.meta,.edition-number,footer{font-family:var(--mono);font-size:var(--label)}
-.who{color:var(--muted)}
-nav{display:flex;flex-wrap:wrap;gap:0 24px}
-nav a{display:inline-flex;align-items:center;min-height:44px}
-.languages{display:flex;gap:4px}
-.languages[hidden]{display:none}
-.languages button{font:inherit;min-height:44px;min-width:44px;padding:8px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);cursor:pointer}
-.languages button[aria-pressed="true"]{border-color:var(--accent);color:var(--ink);font-weight:700}
-.hero{padding-block:80px 64px}
-h1{font-size:var(--hero);line-height:1.05;letter-spacing:-.04em}
-.role{margin-top:24px;font-size:var(--heading);font-family:var(--display);line-height:1.4}
-.lede{margin-top:24px;max-width:var(--measure)}
-.lede:lang(en){max-width:none}
-.lede-2{margin-top:12px;max-width:var(--measure);color:var(--muted)}
-section{border-top:1px solid var(--hairline);padding-block:32px var(--section)}
-section.hero{border:0}
-h2{font-size:var(--heading);line-height:1.4}
-.door{padding-block:24px;border-bottom:1px solid var(--hairline)}
-.door:last-child{border-bottom:0;padding-bottom:0}
-.door p{margin-top:8px;color:var(--muted)}
-.text-link{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;color:var(--accent);font-size:var(--small)}
-.daftar-edisi{list-style:none;padding:0;margin:24px 0 0}
-.edisi{display:grid;grid-template-columns:minmax(0,1fr) 64px;gap:24px;padding-block:24px;border-top:1px solid var(--hairline)}
-.edisi-isi{min-width:0}
-.edisi-judul{display:inline-block;font-family:var(--display);font-size:var(--heading);line-height:1.4}
-.edisi-ringkas{max-width:var(--measure);margin-top:8px;color:var(--muted)}
-.meta{display:block;margin-top:12px;color:var(--muted)}
-.edition-number{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);padding-top:6px}
-.kosong{margin-top:24px;max-width:var(--measure)}
-.contact p{margin-top:16px}
-.contact .mail{font-size:var(--heading);font-family:var(--display);overflow-wrap:anywhere}
-footer{border-top:1px solid var(--hairline);color:var(--muted)}
-footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;padding-block:24px 40px}
-footer a{display:inline-flex;align-items:center;min-height:44px}
-footer .copyright{margin-right:auto}
-@media(max-width:640px){
-  :root{--gutter:20px;--hero:48px;--section:48px}
-  .masthead .wrap{gap:4px 12px}
-  .who{flex-basis:100%}
-  nav{gap:0 16px}
-  .hero{padding-block:48px}
-  .edisi{grid-template-columns:minmax(0,1fr) 32px;gap:12px}
-}
-</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Yunar Prawira Negara",
+"url":"https://www.yunarprawira.com/","jobTitle":"{{JOBTITLE}}",
+"address":{"@type":"PostalAddress","addressLocality":"Jakarta","addressCountry":"ID"},
+"knowsAbout":["HRIS implementation","Project management","Payroll and PPh21 compliance","AI automation"],
+"knowsLanguage":["id","en"],
+"sameAs":["https://linkedin.com/in/yunarprawira","https://github.com/yunar-prawira"]}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">{{SKIP}}</a>
+
 <header class="masthead"><div class="wrap">
 <span class="who">Yunar Prawira · Jakarta</span>
-<nav aria-label="Navigasi utama" data-label-id="Navigasi utama" data-label-en="Main navigation">
-<a href="#kilas">Kilas</a><a href="/cv/">CV</a><a href="{{PORTFOLIO}}">Portfolio</a><a href="mailto:{{EMAIL}}">Email</a>
+<nav aria-label="{{NAVLABEL}}">
+<a href="#work">{{NAVWORK}}</a><a href="#kilas">{{NAVKILAS}}</a><a href="#contact">{{NAVCONTACT}}</a>
 </nav>
-<div class="languages" role="group" aria-label="Bahasa / Language" hidden>
-<button type="button" lang="id" data-language="id" aria-label="Bahasa Indonesia" aria-pressed="true">ID</button>
-<button type="button" lang="en" data-language="en" aria-label="English" aria-pressed="false">EN</button>
+<div class="languages" role="group" aria-label="Bahasa / Language">
+<a href="https://www.yunarprawira.com/" lang="id" hreflang="id"{{CURRENTID}}>ID</a>
+<a href="https://www.yunarprawira.com/en/" lang="en" hreflang="en"{{CURRENTEN}}>EN</a>
 </div>
 </div></header>
-<main class="wrap">
+
+<main class="wrap" id="main">
+
 <section class="hero">
 <h1>Yunar Prawira</h1>
-<p class="role" data-en="Project manager · HR technology implementation">Project manager · implementasi HR technology</p>
-<p class="lede" data-en="I implement HR systems in large companies. I also build my own AI products and write about what I learn from both.">Saya menjalankan implementasi sistem HR di perusahaan besar. Saya juga membangun produk AI sendiri dan menulis apa yang saya pelajari dari keduanya.</p>
-</section>
-<section aria-label="Bacaan dan portfolio" data-label-id="Bacaan dan portfolio" data-label-en="Reading and portfolio">
-<div class="door">
-<h2>Kilas</h2>
-<p data-en="An AI brief published three times a week: models, research, and how AI changes work. Every figure links to its source.">Brief AI tiga edisi seminggu: model, riset, dan cara AI mengubah pekerjaan. Setiap angka bertaut ke sumbernya.</p>
-<a class="text-link" href="{{KILAS}}/" data-en="Read Kilas">Baca Kilas</a>
-</div>
-<div class="door">
-<h2>Portfolio</h2>
-<p data-en="Enterprise implementation case studies: situations, decisions, results, and lessons I take into the next project.">Studi kasus implementasi enterprise: situasi, keputusan, hasil, dan pelajaran yang saya bawa ke proyek berikutnya.</p>
-<a class="text-link" href="{{PORTFOLIO}}" data-en="Open portfolio on Notion">Buka portfolio di Notion</a>
+<p class="role">{{ROLE}}</p>
+<p class="lede">{{LEDE}}</p>
+<p class="lede-2">{{LEDE2}}</p>
+<div class="actions">
+<a class="btn" href="/assets/Yunar-Prawira-CV.pdf" download>{{BTNCV}}</a>
+<a class="btn btn-ghost" href="#contact">{{BTNTALK}}</a>
 </div>
 </section>
+
+<section aria-label="{{PROOFLABEL}}">
+<h2>{{PROOFHEAD}}</h2>
+<ul class="proof">
+{{PROOF}}
+</ul>
+</section>
+
+<section id="work">
+<h2>{{WORKHEAD}}</h2>
+<p class="lede-2">{{WORKLEAD}}</p>
+<ul class="work">
+{{WORKITEMS}}
+</ul>
+</section>
+
 <section id="kilas">
-<h2 data-en="Latest editions of Kilas">Edisi terbaru di Kilas</h2>
+<h2>{{KILASHEAD}}</h2>
 {{EDITIONS}}
-<a class="text-link" href="{{KILAS}}/" data-en="All editions and topic archives">Semua edisi dan arsip topik</a>
+<a class="text-link" href="https://kilas.yunarprawira.com/">{{KILASALL}}</a>
 </section>
+
 <section class="contact" id="contact">
-<h2 data-en="Discuss a project">Membicarakan proyek</h2>
-<p data-en="For project management, HRIS implementation, or building an AI product together.">Untuk pekerjaan project management, implementasi HRIS, atau membangun produk AI bersama.</p>
-<p data-en="Send a paragraph about the problem, not a tender attachment.">Kirim satu paragraf soal masalahnya, bukan lampiran tender.</p>
-<a class="text-link mail" href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+<h2>{{CONTACTHEAD}}</h2>
+<p class="pitch">{{CONTACTPITCH}}</p>
+<p>{{CONTACTASK}}</p>
+<div class="actions">
+<a class="btn" href="mailto:mail@yunarprawira.com?subject={{MAILSUBJECT}}">{{BTNMAIL}}</a>
+<a class="btn btn-ghost" href="https://linkedin.com/in/yunarprawira">{{BTNLINKEDIN}}</a>
+</div>
 </section>
+
 </main>
-<footer><div class="wrap"><span class="copyright">Yunar Prawira · {{TAHUN}}</span><a href="https://linkedin.com/in/yunarprawira">LinkedIn</a><a href="{{KILAS}}/feed.xml">RSS Kilas</a><a href="mailto:{{EMAIL}}">Email</a></div></footer>
-<script>
-(() => {
-  const titles = {id:'Yunar Prawira | Project management dan implementasi HR',en:'Yunar Prawira | Project management and HR implementation'};
-  const descriptions = {id:'Implementasi sistem HR, produk AI, dan catatan dari keduanya. Baca Kilas, lihat portfolio, atau hubungi Yunar Prawira.',en:'HR system implementation, AI products, and notes from both. Read Kilas, view the portfolio, or contact Yunar Prawira.'};
-  const texts = [...document.querySelectorAll('[data-en]')];
-  texts.forEach(el => {el.dataset.id = el.textContent;});
-  function setLanguage(language) {
-    const lang = language === 'en' ? 'en' : 'id';
-    document.documentElement.lang = lang;
-    document.title = titles[lang];
-    document.querySelector('meta[name="description"]').content = descriptions[lang];
-    document.querySelector('meta[property="og:title"]').content = titles[lang];
-    document.querySelector('meta[property="og:description"]').content = descriptions[lang];
-    document.querySelector('meta[property="og:locale"]').content = lang === 'id' ? 'id_ID' : 'en_GB';
-    texts.forEach(el => {el.textContent = el.dataset[lang];});
-    document.querySelectorAll('[data-label-en]').forEach(el => {el.setAttribute('aria-label', el.dataset[lang === 'id' ? 'labelId' : 'labelEn']);});
-    document.querySelectorAll('[data-language]').forEach(button => {button.setAttribute('aria-pressed', String(button.dataset.language === lang));});
-    try {localStorage.setItem('home-language', lang);} catch (_) {}
-  }
-  let saved = 'id';
-  try {saved = localStorage.getItem('home-language') || 'id';} catch (_) {}
-  setLanguage(saved);
-  document.querySelectorAll('[data-language]').forEach(button => {button.addEventListener('click', () => setLanguage(button.dataset.language));});
-  document.querySelector('.languages').hidden = false;
-})();
-</script>
+
+<footer><div class="wrap">
+<span class="copyright">Yunar Prawira · {{TAHUN}}</span>
+<a href="https://linkedin.com/in/yunarprawira">LinkedIn</a>
+<a href="https://github.com/yunar-prawira">GitHub</a>
+<a href="https://kilas.yunarprawira.com/feed.xml">RSS Kilas</a>
+<a href="mailto:mail@yunarprawira.com">mail@yunarprawira.com</a>
+</div></footer>
 </body>
 </html>
