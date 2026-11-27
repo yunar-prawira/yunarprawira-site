@@ -9,6 +9,7 @@ REPO="yunar-prawira/yunarprawira-site"
 SITE="https://www.yunarprawira.com"
 
 python3 build.py
+python3 build_cv.py
 python3 - <<'PY'
 # gerbang wajib: tidak boleh push kalau placeholder masih tersisa
 import pathlib, re, sys
@@ -16,6 +17,8 @@ h = pathlib.Path("docs/index.html").read_text()
 sisa = re.findall(r"\{\{[A-Z]+\}\}", h)
 if sisa:
     sys.exit(f"gagal: placeholder belum terisi: {sorted(set(sisa))}")
+if not pathlib.Path("docs/cv/index.html").is_file():
+    sys.exit("gagal: docs/cv/index.html belum dibangun")
 print("gerbang: tidak ada placeholder tersisa")
 PY
 
@@ -24,7 +27,7 @@ printf 'www.yunarprawira.com\n' > docs/CNAME
 
 git add -A
 if git -c user.name="Yunar Prawira" \
-      -c user.email="281810709+yunarganteng@users.noreply.github.com" \
+      -c user.email="281810709+yunar-prawira@users.noreply.github.com" \
       commit -q -m "$MSG"; then
   git push -q origin master
   echo "pushed: $MSG"
