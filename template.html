@@ -3,245 +3,151 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yunar Prawira — project manager, implementasi HR technology</title>
-<meta name="description" content="Yunar Prawira, project manager implementasi HR technology di Asia Tenggara. Lima belas tahun, enam negara, produk AI yang dibangun sendiri.">
+<title>Yunar Prawira | Project management dan implementasi HR</title>
+<meta name="description" content="Implementasi sistem HR, produk AI, dan catatan dari keduanya. Baca Kilas, lihat portfolio, atau hubungi Yunar Prawira.">
 <meta name="color-scheme" content="light">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://yunarprawira.com/">
-<meta property="og:title" content="Yunar Prawira">
-<meta property="og:description" content="Project manager implementasi HR technology. Kilas: brief AI tiga edisi seminggu.">
+<meta property="og:title" content="Yunar Prawira | Project management dan implementasi HR">
+<meta property="og:description" content="Implementasi sistem HR, produk AI, dan catatan dari keduanya. Baca Kilas, lihat portfolio, atau hubungi Yunar Prawira.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yunarprawira.com/">
 <meta property="og:locale" content="id_ID">
 <meta name="twitter:card" content="summary">
-<link rel="alternate" type="application/rss+xml" title="Kilas — Yunar AI Brief" href="{{KILAS}}/feed.xml">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%237A2E2E'/></svg>">
+<link rel="alternate" type="application/rss+xml" title="Kilas" href="{{KILAS}}/feed.xml">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23D70015' d='M0 0h24v24H0z'/></svg>">
 <style>
 :root{
-  --bg:#FDFCF9; --surface:#F7F4EE; --ink:#16130F; --muted:#6E6659;
-  --hairline:#E0D9CB; --accent:#7A2E2E;
-  --display:"Bitstream Charter", Charter, "Liberation Serif", Georgia, serif;
-  --body:Lato, "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
-  --mono:"DejaVu Sans Mono", "Liberation Mono", monospace;
-  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:20px; --s6:24px;
-  --s8:32px; --s10:40px; --s12:48px; --s16:64px; --s20:80px; --s24:96px;
+  --bg:#FDFCF9; --ink:#16130F; --muted:#6E6659; --hairline:#E0D9CB; --accent:#D70015;
+  --display:"Bitstream Charter",Charter,"Liberation Serif",Georgia,serif;
+  --body:Lato,"Liberation Sans","DejaVu Sans",Arial,sans-serif;
+  --mono:"DejaVu Sans Mono","Liberation Mono",monospace;
+  --label:12px; --small:14px; --text:16px; --heading:24px; --hero:80px;
+  --unit:4px; --gutter:24px; --section:64px; --measure:68ch;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  margin:0; background:var(--bg); color:var(--ink);
-  font-family:var(--body); font-size:16px; line-height:1.55;
-  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-}
-.wrap{max-width:760px; margin:0 auto; padding:0 var(--s6)}
-a{color:inherit; text-decoration:none}
-p{margin:0}
-h1,h2,h3{margin:0; font-family:var(--display); font-weight:400; letter-spacing:-.01em}
-
-/* ---------- masthead ---------- */
+html{-webkit-text-size-adjust:100%;scroll-behavior:auto}
+body{margin:0;background:var(--bg);color:var(--ink);font:var(--text)/1.6 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1008px;margin:auto;padding-inline:var(--gutter)}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:4px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+p,h1,h2{margin:0}
+h1,h2{font-family:var(--display);font-weight:400}
 .masthead{border-bottom:1px solid var(--hairline)}
-.masthead .wrap{display:flex; align-items:center; gap:var(--s4); min-height:56px}
-.masthead .who{font-family:var(--mono); font-size:11px; letter-spacing:.08em;
-  text-transform:uppercase; color:var(--muted)}
-.masthead nav{margin-left:auto; display:flex; align-items:center; gap:var(--s4);
-  font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase}
-.masthead nav a{color:var(--muted); padding:0 0; display:inline-flex; align-items:center;
-  min-height:44px}
-.masthead nav a:hover{color:var(--ink)}
-
-/* ---------- hero ---------- */
-.hero{padding:var(--s20) 0 var(--s16)}
-.kicker{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
-  color:var(--accent); margin-bottom:var(--s5)}
-h1{font-size:48px; line-height:1.04; letter-spacing:-.03em}
-.lede{margin-top:var(--s6); font-size:16px; max-width:52ch; color:var(--ink)}
-.lede-2{margin-top:var(--s4); font-size:16px; max-width:52ch; color:var(--muted)}
-.lede strong{font-weight:700}
-.rule{height:2px; background:var(--accent); width:64px; margin:var(--s8) 0 0}
-
-/* ---------- dua pintu ---------- */
-.doors{display:grid; grid-template-columns:1fr 1fr; gap:0; border-top:1px solid var(--hairline);
-  border-bottom:1px solid var(--hairline)}
-.door{padding:var(--s8) var(--s6) var(--s10) 0; display:block; position:relative}
-.door + .door{border-left:1px solid var(--hairline); padding-left:var(--s6); padding-right:0}
-.door .no{font-family:var(--mono); font-size:11px; color:var(--muted); letter-spacing:.08em;
-  display:block; margin-bottom:var(--s2)}
-.door h2{font-size:28px; margin-top:0; line-height:1.2}
-.door .desc{margin-top:var(--s2); font-size:16px; color:var(--muted); max-width:34ch}
-.door .go{margin-top:var(--s6); font-family:var(--mono); font-size:11px; letter-spacing:.04em;
-  color:var(--accent); display:flex; align-items:center; gap:var(--s2); min-height:24px}
-.door:hover h2{color:var(--accent)}
-.door:hover .go{text-decoration:underline; text-underline-offset:3px}
-.door .go svg{width:12px; height:12px; flex:none}
-
-/* ---------- seksi ---------- */
-section{padding:var(--s16) 0 0}
-section + section{padding-top:var(--s20)}
-.sec-head{display:flex; align-items:baseline; gap:var(--s3); margin-bottom:var(--s6)}
-.sec-head h2{font-size:20px; letter-spacing:-.005em; line-height:1.3}
-.sec-head .n{font-family:var(--mono); font-size:11px; color:var(--muted); letter-spacing:.08em;
-  order:-1}
-.sec-note{font-size:13px; color:var(--muted); max-width:60ch; margin-bottom:var(--s6)}
-
-/* angka */
-.bukti{border-top:1px solid var(--hairline)}
-.bukti-row{display:grid; grid-template-columns:96px 1fr; gap:var(--s4);
-  padding:var(--s5) 0; border-bottom:1px solid var(--hairline); align-items:baseline}
-.bukti-row .val{font-family:var(--mono); font-size:20px; font-variant-numeric:tabular-nums;
-  color:var(--accent); letter-spacing:-.02em}
-.bukti-row .lbl{margin:0; font-size:16px}
-.bukti-row .lbl span{display:block; font-size:13px; color:var(--muted); margin-top:var(--s1)}
-
-/* daftar edisi */
-.daftar-edisi{list-style:none; margin:0; padding:0; border-top:1px solid var(--hairline)}
-.edisi{display:grid; grid-template-columns:40px 1fr auto; gap:var(--s4); align-items:baseline;
-  padding:var(--s6) 0; border-bottom:1px solid var(--hairline)}
-.edisi .no{font-family:var(--mono); font-size:11px; color:var(--muted);
-  font-variant-numeric:tabular-nums}
-.edisi-judul{font-family:var(--display); font-size:20px; line-height:1.4; display:block}
-.edisi-judul:hover{color:var(--accent); text-decoration:underline; text-underline-offset:3px}
-.edisi-ringkas{margin-top:4px; font-size:13px; color:var(--muted); max-width:52ch;
-  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
-.edisi-tgl{font-family:var(--mono); font-size:11px; color:var(--muted); letter-spacing:.04em;
-  white-space:nowrap}
-.kosong{font-size:16px; color:var(--muted)}
-.kosong a{color:var(--accent); text-decoration:underline; text-underline-offset:3px}
-.lihat{margin:0; border-bottom:1px solid var(--hairline); font-family:var(--mono);
-  font-size:11px; letter-spacing:.04em; color:var(--accent)}
-.lihat a{display:flex; align-items:center; gap:var(--s2); min-height:56px}
-.lihat a:hover{text-decoration:underline; text-underline-offset:3px}
-.lihat a svg{width:12px; height:12px; flex:none}
-
-/* ---------- kontak / footer ---------- */
-.contact{padding:var(--s16) 0 0}
-.contact p{font-size:16px; max-width:56ch}
-.contact .mail{font-family:var(--display); font-size:20px; color:var(--accent);
-  display:inline-flex; align-items:center; margin-top:var(--s4); min-height:44px}
-.contact .mail:hover{text-decoration:underline; text-underline-offset:4px}
-footer{border-top:1px solid var(--hairline); margin-top:var(--s20)}
-footer .wrap{display:flex; flex-wrap:wrap; gap:var(--s4); align-items:center;
-  padding-top:var(--s6); padding-bottom:var(--s10); font-family:var(--mono); font-size:11px;
-  letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
-footer a{display:inline-flex; align-items:center; min-height:44px}
-footer a:hover{color:var(--ink)}
-footer .sp{flex:1}
-
-/* ---------- mobile ---------- */
-@media (max-width:640px){
-  .wrap{padding:0 var(--s5)}
-  .hero{padding:var(--s12) 0 var(--s10)}
-  h1{font-size:32px}
-  .doors{grid-template-columns:1fr}
-  .door{padding:var(--s6) 0 var(--s6)}
-  .door + .door{border-left:0; border-top:1px solid var(--hairline); padding-left:0}
-  .bukti-row{grid-template-columns:1fr; gap:var(--s1); padding:var(--s4) 0}
-  .edisi{grid-template-columns:32px 1fr}
-  .edisi-tgl{display:none}
-  .masthead nav{gap:var(--s3)}
-  .masthead .who{display:none}
+.masthead .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-block:12px}
+.who,nav,.languages,.meta,.edition-number,footer{font-family:var(--mono);font-size:var(--label)}
+.who{color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;gap:0 24px}
+nav a{display:inline-flex;align-items:center;min-height:44px}
+.languages{display:flex;gap:4px}
+.languages[hidden]{display:none}
+.languages button{font:inherit;min-height:44px;min-width:44px;padding:8px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--muted);cursor:pointer}
+.languages button[aria-pressed="true"]{border-color:var(--accent);color:var(--ink);font-weight:700}
+.hero{padding-block:80px 64px}
+h1{font-size:var(--hero);line-height:1.05;letter-spacing:-.04em}
+.role{margin-top:24px;font-size:var(--heading);font-family:var(--display);line-height:1.4}
+.lede{margin-top:24px;max-width:var(--measure)}
+.lede:lang(en){max-width:none}
+.lede-2{margin-top:12px;max-width:var(--measure);color:var(--muted)}
+section{border-top:1px solid var(--hairline);padding-block:32px var(--section)}
+section.hero{border:0}
+h2{font-size:var(--heading);line-height:1.4}
+.door{padding-block:24px;border-bottom:1px solid var(--hairline)}
+.door:last-child{border-bottom:0;padding-bottom:0}
+.door p{margin-top:8px;color:var(--muted)}
+.text-link{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;color:var(--accent);font-size:var(--small)}
+.daftar-edisi{list-style:none;padding:0;margin:24px 0 0}
+.edisi{display:grid;grid-template-columns:minmax(0,1fr) 64px;gap:24px;padding-block:24px;border-top:1px solid var(--hairline)}
+.edisi-isi{min-width:0}
+.edisi-judul{display:inline-block;font-family:var(--display);font-size:var(--heading);line-height:1.4}
+.edisi-ringkas{max-width:var(--measure);margin-top:8px;color:var(--muted)}
+.meta{display:block;margin-top:12px;color:var(--muted)}
+.edition-number{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);padding-top:6px}
+.kosong{margin-top:24px;max-width:var(--measure)}
+.contact p{margin-top:16px}
+.contact .mail{font-size:var(--heading);font-family:var(--display);overflow-wrap:anywhere}
+footer{border-top:1px solid var(--hairline);color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;padding-block:24px 40px}
+footer a{display:inline-flex;align-items:center;min-height:44px}
+footer .copyright{margin-right:auto}
+@media(max-width:640px){
+  :root{--gutter:20px;--hero:48px;--section:48px}
+  .masthead .wrap{gap:4px 12px}
+  .who{flex-basis:100%}
+  nav{gap:0 16px}
+  .hero{padding-block:48px}
+  .edisi{grid-template-columns:minmax(0,1fr) 32px;gap:12px}
 }
 </style>
 </head>
 <body>
-
-<div class="masthead">
-  <div class="wrap">
-    <span class="who">Yunar Prawira · Jakarta</span>
-    <nav>
-      <a href="#kilas">Kilas</a>
-      <a href="/cv/">CV</a>
-      <a href="https://manutd-dashboard.yunarprawira.com/">MU</a>
-      <a href="{{PORTFOLIO}}">Portfolio</a>
-      <a href="mailto:{{EMAIL}}">Email</a>
-    </nav>
-  </div>
+<header class="masthead"><div class="wrap">
+<span class="who">Yunar Prawira · Jakarta</span>
+<nav aria-label="Navigasi utama" data-label-id="Navigasi utama" data-label-en="Main navigation">
+<a href="#kilas">Kilas</a><a href="/cv/">CV</a><a href="{{PORTFOLIO}}">Portfolio</a><a href="mailto:{{EMAIL}}">Email</a>
+</nav>
+<div class="languages" role="group" aria-label="Bahasa / Language" hidden>
+<button type="button" lang="id" data-language="id" aria-label="Bahasa Indonesia" aria-pressed="true">ID</button>
+<button type="button" lang="en" data-language="en" aria-label="English" aria-pressed="false">EN</button>
 </div>
-
+</div></header>
 <main class="wrap">
-
-  <section class="hero" style="padding-top:80px">
-    <p class="kicker">Project manager · implementasi HR technology</p>
-    <h1>Yunar<br>Prawira</h1>
-    <p class="lede">Lima belas tahun menjalankan implementasi sistem HR di perusahaan besar:
-      payroll 4.500 orang lintas tiga entitas, rollout enam negara, dan go-live 15 hari setelah
-      kick-off yang sempat tertunda.</p>
-    <p class="lede-2">Sekarang saya juga membangun produk AI sendiri — dan menulis apa yang saya
-      pelajari dari keduanya.</p>
-    <div class="rule"></div>
-  </section>
-
-  <div class="doors">
-    <a class="door" href="{{KILAS}}/">
-      <span class="no">01</span>
-      <h2>Kilas</h2>
-      <p class="desc">Brief AI tiga edisi seminggu: model, riset, dan cara AI mengubah pekerjaan.
-        Setiap angka bertaut ke sumbernya.</p>
-      <span class="go">kilas.yunarprawira.com
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-      </span>
-    </a>
-    <a class="door" href="{{PORTFOLIO}}">
-      <span class="no">02</span>
-      <h2>Portfolio</h2>
-      <p class="desc">Studi kasus implementasi enterprise: situasi, keputusan, hasil, dan
-        pelajaran yang saya bawa ke proyek berikutnya.</p>
-      <span class="go">Notion · buka portfolio
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
-      </span>
-    </a>
-  </div>
-
-  <section id="bukti">
-    <div class="sec-head"><span class="n">03</span><h2>Yang bisa saya pertanggungjawabkan</h2></div>
-    <div class="bukti">
-      <div class="bukti-row">
-        <span class="val">15 hari</span>
-        <p class="lbl">Dari seremoni kick-off ke go-live, pada klien consumer finance
-          <span>Kick-off mundur; tanggal kontrak tidak bergeser.</span></p>
-      </div>
-      <div class="bukti-row">
-        <span class="val">6 negara</span>
-        <p class="lbl">Rollout regional untuk grup dengan 30.000 karyawan
-          <span>Konfigurasi Indonesia yang sudah live tetap stabil.</span></p>
-      </div>
-      <div class="bukti-row">
-        <span class="val">4.500</span>
-        <p class="lbl">Karyawan dalam satu implementasi lintas tiga entitas
-          <span>Tiga proyek dalam satu akun, bukan satu proyek besar.</span></p>
-      </div>
-      <div class="bukti-row">
-        <span class="val">NPS 10</span>
-        <p class="lbl">Pada go-live tanpa satu pun rapat steering committee
-          <span>Aturan keputusan disepakati di depan, bukan dinegosiasi di tengah.</span></p>
-      </div>
-    </div>
-  </section>
-
-  <section id="kilas">
-    <div class="sec-head"><span class="n">04</span><h2>Edisi terbaru di Kilas</h2></div>
+<section class="hero">
+<h1>Yunar Prawira</h1>
+<p class="role" data-en="Project manager · HR technology implementation">Project manager · implementasi HR technology</p>
+<p class="lede" data-en="I implement HR systems in large companies. I also build my own AI products and write about what I learn from both.">Saya menjalankan implementasi sistem HR di perusahaan besar. Saya juga membangun produk AI sendiri dan menulis apa yang saya pelajari dari keduanya.</p>
+</section>
+<section aria-label="Bacaan dan portfolio" data-label-id="Bacaan dan portfolio" data-label-en="Reading and portfolio">
+<div class="door">
+<h2>Kilas</h2>
+<p data-en="An AI brief published three times a week: models, research, and how AI changes work. Every figure links to its source.">Brief AI tiga edisi seminggu: model, riset, dan cara AI mengubah pekerjaan. Setiap angka bertaut ke sumbernya.</p>
+<a class="text-link" href="{{KILAS}}/" data-en="Read Kilas">Baca Kilas</a>
+</div>
+<div class="door">
+<h2>Portfolio</h2>
+<p data-en="Enterprise implementation case studies: situations, decisions, results, and lessons I take into the next project.">Studi kasus implementasi enterprise: situasi, keputusan, hasil, dan pelajaran yang saya bawa ke proyek berikutnya.</p>
+<a class="text-link" href="{{PORTFOLIO}}" data-en="Open portfolio on Notion">Buka portfolio di Notion</a>
+</div>
+</section>
+<section id="kilas">
+<h2 data-en="Latest editions of Kilas">Edisi terbaru di Kilas</h2>
 {{EDITIONS}}
-    <p class="lihat"><a href="{{KILAS}}/">Semua edisi dan arsip topik
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></p>
-  </section>
-
-  <section class="contact">
-    <div class="sec-head"><span class="n">05</span><h2>Menghubungi saya</h2></div>
-    <p>Untuk pekerjaan project management, implementasi HRIS, atau membangun produk AI
-      bersama: kirim satu paragraf soal masalahnya, bukan lampiran tender.</p>
-    <a class="mail" href="mailto:{{EMAIL}}">{{EMAIL}}</a>
-  </section>
-
+<a class="text-link" href="{{KILAS}}/" data-en="All editions and topic archives">Semua edisi dan arsip topik</a>
+</section>
+<section class="contact" id="contact">
+<h2 data-en="Discuss a project">Membicarakan proyek</h2>
+<p data-en="For project management, HRIS implementation, or building an AI product together.">Untuk pekerjaan project management, implementasi HRIS, atau membangun produk AI bersama.</p>
+<p data-en="Send a paragraph about the problem, not a tender attachment.">Kirim satu paragraf soal masalahnya, bukan lampiran tender.</p>
+<a class="text-link mail" href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+</section>
 </main>
-
-<footer>
-  <div class="wrap">
-    <span>Yunar Prawira · {{TAHUN}}</span>
-    <span class="sp"></span>
-    <a href="https://linkedin.com/in/yunarprawira">LinkedIn</a>
-    <a href="{{KILAS}}/feed.xml">RSS Kilas</a>
-    <a href="mailto:{{EMAIL}}">Email</a>
-  </div>
-</footer>
-
+<footer><div class="wrap"><span class="copyright">Yunar Prawira · {{TAHUN}}</span><a href="https://linkedin.com/in/yunarprawira">LinkedIn</a><a href="{{KILAS}}/feed.xml">RSS Kilas</a><a href="mailto:{{EMAIL}}">Email</a></div></footer>
+<script>
+(() => {
+  const titles = {id:'Yunar Prawira | Project management dan implementasi HR',en:'Yunar Prawira | Project management and HR implementation'};
+  const descriptions = {id:'Implementasi sistem HR, produk AI, dan catatan dari keduanya. Baca Kilas, lihat portfolio, atau hubungi Yunar Prawira.',en:'HR system implementation, AI products, and notes from both. Read Kilas, view the portfolio, or contact Yunar Prawira.'};
+  const texts = [...document.querySelectorAll('[data-en]')];
+  texts.forEach(el => {el.dataset.id = el.textContent;});
+  function setLanguage(language) {
+    const lang = language === 'en' ? 'en' : 'id';
+    document.documentElement.lang = lang;
+    document.title = titles[lang];
+    document.querySelector('meta[name="description"]').content = descriptions[lang];
+    document.querySelector('meta[property="og:title"]').content = titles[lang];
+    document.querySelector('meta[property="og:description"]').content = descriptions[lang];
+    document.querySelector('meta[property="og:locale"]').content = lang === 'id' ? 'id_ID' : 'en_GB';
+    texts.forEach(el => {el.textContent = el.dataset[lang];});
+    document.querySelectorAll('[data-label-en]').forEach(el => {el.setAttribute('aria-label', el.dataset[lang === 'id' ? 'labelId' : 'labelEn']);});
+    document.querySelectorAll('[data-language]').forEach(button => {button.setAttribute('aria-pressed', String(button.dataset.language === lang));});
+    try {localStorage.setItem('home-language', lang);} catch (_) {}
+  }
+  let saved = 'id';
+  try {saved = localStorage.getItem('home-language') || 'id';} catch (_) {}
+  setLanguage(saved);
+  document.querySelectorAll('[data-language]').forEach(button => {button.addEventListener('click', () => setLanguage(button.dataset.language));});
+  document.querySelector('.languages').hidden = false;
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,201 @@
+{
+  "viewport": 1440,
+  "height": 2092,
+  "scroll": 1425,
+  "client": 1425,
+  "edges": [
+    233,
+    1129
+  ],
+  "blocks": [
+    {
+      "selector": "H1",
+      "text": "Yunar Prawira",
+      "width": 960,
+      "characters": 13,
+      "lines": 1
+    },
+    {
+      "selector": "role",
+      "text": "Project manager · implementasi HR technology",
+      "width": 960,
+      "characters": 44,
+      "lines": 1
+    },
+    {
+      "selector": "lede",
+      "text": "Saya menjalankan implementasi sistem HR di perusahaan besar. Saya juga membangun produk AI sendiri dan menulis apa yang saya pelajari dari keduanya.",
+      "width": 631,
+      "characters": 148,
+      "lines": 2
+    },
+    {
+      "selector": "H2",
+      "text": "Kilas",
+      "width": 960,
+      "characters": 5,
+      "lines": 1
+    },
+    {
+      "selector": "P",
+      "text": "Brief AI tiga edisi seminggu: model, riset, dan cara AI mengubah pekerjaan. Setiap angka bertaut ke sumbernya.",
+      "width": 631,
+      "characters": 110,
+      "lines": 2
+    },
+    {
+      "selector": "text-link",
+      "text": "Baca Kilas",
+      "width": 62,
+      "characters": 10,
+      "lines": 1
+    },
+    {
+      "selector": "H2",
+      "text": "Portfolio",
+      "width": 960,
+      "characters": 9,
+      "lines": 1
+    },
+    {
+      "selector": "P",
+      "text": "Studi kasus implementasi enterprise: situasi, keputusan, hasil, dan pelajaran yang saya bawa ke proyek berikutnya.",
+      "width": 631,
+      "characters": 114,
+      "lines": 2
+    },
+    {
+      "selector": "text-link",
+      "text": "Buka portfolio di Notion",
+      "width": 148,
+      "characters": 24,
+      "lines": 1
+    },
+    {
+      "selector": "H2",
+      "text": "Edisi terbaru di Kilas",
+      "width": 960,
+      "characters": 22,
+      "lines": 1
+    },
+    {
+      "selector": "edisi-judul",
+      "text": "98 persen lulus, seperempat cocok",
+      "width": 330,
+      "characters": 33,
+      "lines": 1
+    },
+    {
+      "selector": "edisi-ringkas",
+      "text": "Test suite Anthropic lulus 98% tapi cuma seperempat input produksi yang cocok. Di hari yang sama Nvidia berhenti kirim server ke Indonesia, dan server MCP boleh mengirim instruksi yang tak dibaca siapa pun.",
+      "width": 631,
+      "characters": 206,
+      "lines": 3
+    },
+    {
+      "selector": "meta",
+      "text": "27 November 2026",
+      "width": 872,
+      "characters": 16,
+      "lines": 1
+    },
+    {
+      "selector": "edition-number",
+      "text": "27",
+      "width": 64,
+      "characters": 2,
+      "lines": 1
+    },
+    {
+      "selector": "edisi-judul",
+      "text": "Batas yang hanya bekerja kalau ditulis",
+      "width": 370,
+      "characters": 38,
+      "lines": 1
+    },
+    {
+      "selector": "edisi-ringkas",
+      "text": "Enam model Claude mencoba keluar sandbox di 21-32% skenario, tapi cuma 0,6-1,6% yang memakainya secara salah. Batas yang ditulis eksplisit mengubah perilaku, dan minggu ini tiga perusahaan menaruh batas itu di tempat yang bisa dibaca.",
+      "width": 631,
+      "characters": 234,
+      "lines": 3
+    },
+    {
+      "selector": "meta",
+      "text": "25 November 2026",
+      "width": 872,
+      "characters": 16,
+      "lines": 1
+    },
+    {
+      "selector": "edition-number",
+      "text": "26",
+      "width": 64,
+      "characters": 2,
+      "lines": 1
+    },
+    {
+      "selector": "edisi-judul",
+      "text": "Dua puluh gigabyte, dan asal-usul yang tak bisa dilihat",
+      "width": 527,
+      "characters": 55,
+      "lines": 1
+    },
+    {
+      "selector": "edisi-ringkas",
+      "text": "Model 26B berlisensi Apache bisa jalan offline di laptop dan menyalip model 27B di coding agent. Di hari yang sama, komite DPR Amerika bilang tak ada yang bisa memastikan model siapa yang bekerja di dalam produk mereka.",
+      "width": 631,
+      "characters": 219,
+      "lines": 3
+    },
+    {
+      "selector": "meta",
+      "text": "23 November 2026",
+      "width": 872,
+      "characters": 16,
+      "lines": 1
+    },
+    {
+      "selector": "edition-number",
+      "text": "25",
+      "width": 64,
+      "characters": 2,
+      "lines": 1
+    },
+    {
+      "selector": "text-link",
+      "text": "Semua edisi dan arsip topik",
+      "width": 167,
+      "characters": 27,
+      "lines": 1
+    },
+    {
+      "selector": "H2",
+      "text": "Membicarakan proyek",
+      "width": 960,
+      "characters": 19,
+      "lines": 1
+    },
+    {
+      "selector": "P",
+      "text": "Untuk pekerjaan project management, implementasi HRIS, atau membangun produk AI bersama.",
+      "width": 631,
+      "characters": 88,
+      "lines": 2
+    },
+    {
+      "selector": "P",
+      "text": "Kirim satu paragraf soal masalahnya, bukan lampiran tender.",
+      "width": 631,
+      "characters": 59,
+      "lines": 1
+    },
+    {
+      "selector": "text-link mail",
+      "text": "mail@yunarprawira.com",
+      "width": 240,
+      "characters": 21,
+      "lines": 1
+    }
+  ]
+}

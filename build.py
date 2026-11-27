@@ -65,22 +65,46 @@ def ambil_edisi(limit: int = 3):
     return out
 
 
+# Reviewed translations are keyed by the exact source copy. A changed feed item
+# gets a bilingual reading link, never an invented or stale translation.
+TRANSLATIONS = {
+    "98 persen lulus, seperempat cocok": "98 percent pass, a quarter match",
+    "Batas yang hanya bekerja kalau ditulis": "Boundaries that only work when written down",
+    "Dua puluh gigabyte, dan asal-usul yang tak bisa dilihat": "Twenty gigabytes, and origins that cannot be seen",
+    "Test suite Anthropic lulus 98% tapi cuma seperempat input produksi yang cocok. Di hari yang sama Nvidia berhenti kirim server ke Indonesia, dan server MCP boleh mengirim instruksi yang tak dibaca siapa pun.": "Anthropic's test suite passes 98%, but only a quarter of production inputs match. On the same day, Nvidia stops shipping servers to Indonesia, and MCP servers can send instructions that nobody reads.",
+    "Enam model Claude mencoba keluar sandbox di 21-32% skenario, tapi cuma 0,6-1,6% yang memakainya secara salah. Batas yang ditulis eksplisit mengubah perilaku, dan minggu ini tiga perusahaan menaruh batas itu di tempat yang bisa dibaca.": "Six Claude models try to escape a sandbox in 21-32% of scenarios, but only 0.6-1.6% misuse it. Explicitly written boundaries change behaviour, and this week three companies put those boundaries where they can be read.",
+    "Model 26B berlisensi Apache bisa jalan offline di laptop dan menyalip model 27B di coding agent. Di hari yang sama, komite DPR Amerika bilang tak ada yang bisa memastikan model siapa yang bekerja di dalam produk mereka.": "An Apache-licensed 26B model can run offline on a laptop and outperform a 27B model in a coding agent. On the same day, a US House committee says nobody can be certain whose model is working inside their products.",
+}
+MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August",
+             "September", "October", "November", "December"]
+
+
 def baris_edisi(ed: dict) -> str:
-    nomor = f'<span class="no">{esc(ed["nomor"])}</span>' if ed["nomor"] else '<span class="no">·</span>'
+    title = ed['judul']
+    summary = ed['ringkas']
+    translated = title in TRANSLATIONS and summary in TRANSLATIONS
+    if not translated:
+        print(f"peringatan: terjemahan edisi {ed['nomor']} belum tersedia; pakai tautan bilingual", file=sys.stderr)
+    title_id = title if translated else 'Baca edisi Kilas'
+    title_en = TRANSLATIONS[title] if translated else 'Read this edition of Kilas'
+    paragraph = (f'<p class="edisi-ringkas" data-en="{esc(TRANSLATIONS[summary])}">{esc(summary)}</p>'
+                 if translated else '')
+    date_en = ed['tanggal']
+    for month_id, month_en in zip(BULAN, MONTHS_EN):
+        date_en = date_en.replace(month_id, month_en)
     return f"""      <li class="edisi">
-        {nomor}
         <div class="edisi-isi">
-          <a class="edisi-judul" href="{esc(ed['link'])}">{esc(ed['judul'])}</a>
-          <p class="edisi-ringkas">{esc(ed['ringkas'])}</p>
+          <a class="edisi-judul" href="{esc(ed['link'])}" data-en="{esc(title_en)}">{esc(title_id)}</a>
+          {paragraph}
+          <span class="meta" data-en="{esc(date_en)}">{esc(ed['tanggal'])}</span>
         </div>
-        <span class="edisi-tgl">{esc(ed['tanggal'])}</span>
+        <span class="edition-number">{esc(ed['nomor'])}</span>
       </li>"""
 
 
 def blok_kilas(edisi) -> str:
     if not edisi:
-        return f"""      <p class="kosong">Edisi terbaru bisa dibaca langsung di
-        <a href="{KILAS}/">{esc(KILAS.replace('https://', ''))}</a>.</p>"""
+        return f'''      <p class="kosong"><a href="{KILAS}/" data-en="Read the latest editions on Kilas">Baca edisi terbaru di Kilas</a></p>'''
     return "      <ol class=\"daftar-edisi\">\n" + "\n".join(baris_edisi(e) for e in edisi) + "\n      </ol>"
 
 

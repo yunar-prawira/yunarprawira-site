@@ -1,0 +1,114 @@
+{
+  "click-en": {
+    "lang": "en",
+    "title": "Yunar Prawira | Project management and HR implementation",
+    "description": "HR system implementation, AI products, and notes from both. Read Kilas, view the portfolio, or contact Yunar Prawira.",
+    "blocks": [
+      "Project manager · HR technology implementation",
+      "I implement HR systems in large companies. I also build my own AI products and write about what I learn from both.",
+      "Discuss a project"
+    ],
+    "pressed": [
+      [
+        "ID",
+        "false"
+      ],
+      [
+        "EN",
+        "true"
+      ]
+    ]
+  },
+  "refresh-en": {
+    "lang": "en",
+    "title": "Yunar Prawira | Project management and HR implementation",
+    "description": "HR system implementation, AI products, and notes from both. Read Kilas, view the portfolio, or contact Yunar Prawira.",
+    "blocks": [
+      "Project manager · HR technology implementation",
+      "I implement HR systems in large companies. I also build my own AI products and write about what I learn from both.",
+      "Discuss a project"
+    ],
+    "pressed": [
+      [
+        "ID",
+        "false"
+      ],
+      [
+        "EN",
+        "true"
+      ]
+    ]
+  },
+  "click-id": {
+    "lang": "id",
+    "title": "Yunar Prawira | Project management dan implementasi HR",
+    "description": "Implementasi sistem HR, produk AI, dan catatan dari keduanya. Baca Kilas, lihat portfolio, atau hubungi Yunar Prawira.",
+    "blocks": [
+      "Project manager · implementasi HR technology",
+      "Saya menjalankan implementasi sistem HR di perusahaan besar. Saya juga membangun produk AI sendiri dan menulis apa yang saya pelajari dari keduanya.",
+      "Membicarakan proyek"
+    ],
+    "pressed": [
+      [
+        "ID",
+        "true"
+      ],
+      [
+        "EN",
+        "false"
+      ]
+    ]
+  },
+  "refresh-id": {
+    "lang": "id",
+    "title": "Yunar Prawira | Project management dan implementasi HR",
+    "description": "Implementasi sistem HR, produk AI, dan catatan dari keduanya. Baca Kilas, lihat portfolio, atau hubungi Yunar Prawira.",
+    "blocks": [
+      "Project manager · implementasi HR technology",
+      "Saya menjalankan implementasi sistem HR di perusahaan besar. Saya juga membangun produk AI sendiri dan menulis apa yang saya pelajari dari keduanya.",
+      "Membicarakan proyek"
+    ],
+    "pressed": [
+      [
+        "ID",
+        "true"
+      ],
+      [
+        "EN",
+        "false"
+      ]
+    ]
+  },
+  "keyboard-EN": {
+    "lang": "en",
+    "title": "Yunar Prawira | Project management and HR implementation",
+    "description": "HR system implementation, AI products, and notes from both. Read Kilas, view the portfolio, or contact Yunar Prawira.",
+    "blocks": [
+      "Project manager · HR technology implementation",
+      "I implement HR systems in large companies. I also build my own AI products and write about what I learn from both.",
+      "Discuss a project"
+    ],
+    "pressed": [
+      [
+        "ID",
+        "false"
+      ],
+      [
+        "EN",
+        "true"
+      ]
+    ]
+  },
+  "targets": [
+    {
+      "text": "ID",
+      "width": 44,
+      "height": 44
+    },
+    {
+      "text": "EN",
+      "width": 44,
+      "height": 44
+    }
+  ]
+}

@@ -1,0 +1,1208 @@
+{
+  "id-1440": {
+    "viewport": 1440,
+    "height": 2015,
+    "scroll": 1440,
+    "client": 1440,
+    "edges": [
+      240,
+      1136
+    ],
+    "blocks": [
+      {
+        "selector": "H1",
+        "text": "Yunar Prawira",
+        "width": 960,
+        "characters": 13,
+        "lines": 1
+      },
+      {
+        "selector": "role",
+        "text": "Project manager · implementasi HR technology",
+        "width": 960,
+        "characters": 44,
+        "lines": 1
+      },
+      {
+        "selector": "lede",
+        "text": "Saya menjalankan implementasi sistem HR di perusahaan besar. Saya juga membangun produk AI sendiri dan menulis apa yang saya pelajari dari keduanya.",
+        "width": 631,
+        "characters": 148,
+        "lines": 2
+      },
+      {
+        "selector": "H2",
+        "text": "Kilas",
+        "width": 960,
+        "characters": 5,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Brief AI tiga edisi seminggu: model, riset, dan cara AI mengubah pekerjaan. Setiap angka bertaut ke sumbernya.",
+        "width": 960,
+        "characters": 110,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "Baca Kilas",
+        "width": 62,
+        "characters": 10,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Portfolio",
+        "width": 960,
+        "characters": 9,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Studi kasus implementasi enterprise: situasi, keputusan, hasil, dan pelajaran yang saya bawa ke proyek berikutnya.",
+        "width": 960,
+        "characters": 114,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "Buka portfolio di Notion",
+        "width": 148,
+        "characters": 24,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Edisi terbaru di Kilas",
+        "width": 960,
+        "characters": 22,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "98 persen lulus, seperempat cocok",
+        "width": 330,
+        "characters": 33,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Test suite Anthropic lulus 98% tapi cuma seperempat input produksi yang cocok. Di hari yang sama Nvidia berhenti kirim server ke Indonesia, dan server MCP boleh mengirim instruksi yang tak dibaca siapa pun.",
+        "width": 631,
+        "characters": 206,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "27 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "27",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Batas yang hanya bekerja kalau ditulis",
+        "width": 370,
+        "characters": 38,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Enam model Claude mencoba keluar sandbox di 21-32% skenario, tapi cuma 0,6-1,6% yang memakainya secara salah. Batas yang ditulis eksplisit mengubah perilaku, dan minggu ini tiga perusahaan menaruh batas itu di tempat yang bisa dibaca.",
+        "width": 631,
+        "characters": 234,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "25 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "26",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Dua puluh gigabyte, dan asal-usul yang tak bisa dilihat",
+        "width": 527,
+        "characters": 55,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Model 26B berlisensi Apache bisa jalan offline di laptop dan menyalip model 27B di coding agent. Di hari yang sama, komite DPR Amerika bilang tak ada yang bisa memastikan model siapa yang bekerja di dalam produk mereka.",
+        "width": 631,
+        "characters": 219,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "23 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "25",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "Semua edisi dan arsip topik",
+        "width": 167,
+        "characters": 27,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Membicarakan proyek",
+        "width": 960,
+        "characters": 19,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Untuk pekerjaan project management, implementasi HRIS, atau membangun produk AI bersama.",
+        "width": 960,
+        "characters": 88,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Kirim satu paragraf soal masalahnya, bukan lampiran tender.",
+        "width": 960,
+        "characters": 59,
+        "lines": 1
+      },
+      {
+        "selector": "text-link mail",
+        "text": "mail@yunarprawira.com",
+        "width": 240,
+        "characters": 21,
+        "lines": 1
+      }
+    ]
+  },
+  "id-1280": {
+    "viewport": 1280,
+    "height": 2015,
+    "scroll": 1280,
+    "client": 1280,
+    "edges": [
+      160,
+      1056
+    ],
+    "blocks": [
+      {
+        "selector": "H1",
+        "text": "Yunar Prawira",
+        "width": 960,
+        "characters": 13,
+        "lines": 1
+      },
+      {
+        "selector": "role",
+        "text": "Project manager · implementasi HR technology",
+        "width": 960,
+        "characters": 44,
+        "lines": 1
+      },
+      {
+        "selector": "lede",
+        "text": "Saya menjalankan implementasi sistem HR di perusahaan besar. Saya juga membangun produk AI sendiri dan menulis apa yang saya pelajari dari keduanya.",
+        "width": 631,
+        "characters": 148,
+        "lines": 2
+      },
+      {
+        "selector": "H2",
+        "text": "Kilas",
+        "width": 960,
+        "characters": 5,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Brief AI tiga edisi seminggu: model, riset, dan cara AI mengubah pekerjaan. Setiap angka bertaut ke sumbernya.",
+        "width": 960,
+        "characters": 110,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "Baca Kilas",
+        "width": 62,
+        "characters": 10,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Portfolio",
+        "width": 960,
+        "characters": 9,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Studi kasus implementasi enterprise: situasi, keputusan, hasil, dan pelajaran yang saya bawa ke proyek berikutnya.",
+        "width": 960,
+        "characters": 114,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "Buka portfolio di Notion",
+        "width": 148,
+        "characters": 24,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Edisi terbaru di Kilas",
+        "width": 960,
+        "characters": 22,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "98 persen lulus, seperempat cocok",
+        "width": 330,
+        "characters": 33,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Test suite Anthropic lulus 98% tapi cuma seperempat input produksi yang cocok. Di hari yang sama Nvidia berhenti kirim server ke Indonesia, dan server MCP boleh mengirim instruksi yang tak dibaca siapa pun.",
+        "width": 631,
+        "characters": 206,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "27 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "27",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Batas yang hanya bekerja kalau ditulis",
+        "width": 370,
+        "characters": 38,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Enam model Claude mencoba keluar sandbox di 21-32% skenario, tapi cuma 0,6-1,6% yang memakainya secara salah. Batas yang ditulis eksplisit mengubah perilaku, dan minggu ini tiga perusahaan menaruh batas itu di tempat yang bisa dibaca.",
+        "width": 631,
+        "characters": 234,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "25 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "26",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Dua puluh gigabyte, dan asal-usul yang tak bisa dilihat",
+        "width": 527,
+        "characters": 55,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Model 26B berlisensi Apache bisa jalan offline di laptop dan menyalip model 27B di coding agent. Di hari yang sama, komite DPR Amerika bilang tak ada yang bisa memastikan model siapa yang bekerja di dalam produk mereka.",
+        "width": 631,
+        "characters": 219,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "23 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "25",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "Semua edisi dan arsip topik",
+        "width": 167,
+        "characters": 27,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Membicarakan proyek",
+        "width": 960,
+        "characters": 19,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Untuk pekerjaan project management, implementasi HRIS, atau membangun produk AI bersama.",
+        "width": 960,
+        "characters": 88,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Kirim satu paragraf soal masalahnya, bukan lampiran tender.",
+        "width": 960,
+        "characters": 59,
+        "lines": 1
+      },
+      {
+        "selector": "text-link mail",
+        "text": "mail@yunarprawira.com",
+        "width": 240,
+        "characters": 21,
+        "lines": 1
+      }
+    ]
+  },
+  "id-390": {
+    "viewport": 390,
+    "height": 2581,
+    "scroll": 390,
+    "client": 390,
+    "edges": [
+      20,
+      338
+    ],
+    "blocks": [
+      {
+        "selector": "H1",
+        "text": "Yunar Prawira",
+        "width": 350,
+        "characters": 13,
+        "lines": 1
+      },
+      {
+        "selector": "role",
+        "text": "Project manager · implementasi HR technology",
+        "width": 350,
+        "characters": 44,
+        "lines": 2
+      },
+      {
+        "selector": "lede",
+        "text": "Saya menjalankan implementasi sistem HR di perusahaan besar. Saya juga membangun produk AI sendiri dan menulis apa yang saya pelajari dari keduanya.",
+        "width": 350,
+        "characters": 148,
+        "lines": 4
+      },
+      {
+        "selector": "H2",
+        "text": "Kilas",
+        "width": 350,
+        "characters": 5,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Brief AI tiga edisi seminggu: model, riset, dan cara AI mengubah pekerjaan. Setiap angka bertaut ke sumbernya.",
+        "width": 350,
+        "characters": 110,
+        "lines": 3
+      },
+      {
+        "selector": "text-link",
+        "text": "Baca Kilas",
+        "width": 62,
+        "characters": 10,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Portfolio",
+        "width": 350,
+        "characters": 9,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Studi kasus implementasi enterprise: situasi, keputusan, hasil, dan pelajaran yang saya bawa ke proyek berikutnya.",
+        "width": 350,
+        "characters": 114,
+        "lines": 3
+      },
+      {
+        "selector": "text-link",
+        "text": "Buka portfolio di Notion",
+        "width": 148,
+        "characters": 24,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Edisi terbaru di Kilas",
+        "width": 350,
+        "characters": 22,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "98 persen lulus, seperempat cocok",
+        "width": 306,
+        "characters": 33,
+        "lines": 2
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Test suite Anthropic lulus 98% tapi cuma seperempat input produksi yang cocok. Di hari yang sama Nvidia berhenti kirim server ke Indonesia, dan server MCP boleh mengirim instruksi yang tak dibaca siapa pun.",
+        "width": 306,
+        "characters": 206,
+        "lines": 6
+      },
+      {
+        "selector": "meta",
+        "text": "27 November 2026",
+        "width": 306,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "27",
+        "width": 32,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Batas yang hanya bekerja kalau ditulis",
+        "width": 306,
+        "characters": 38,
+        "lines": 2
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Enam model Claude mencoba keluar sandbox di 21-32% skenario, tapi cuma 0,6-1,6% yang memakainya secara salah. Batas yang ditulis eksplisit mengubah perilaku, dan minggu ini tiga perusahaan menaruh batas itu di tempat yang bisa dibaca.",
+        "width": 306,
+        "characters": 234,
+        "lines": 7
+      },
+      {
+        "selector": "meta",
+        "text": "25 November 2026",
+        "width": 306,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "26",
+        "width": 32,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Dua puluh gigabyte, dan asal-usul yang tak bisa dilihat",
+        "width": 306,
+        "characters": 55,
+        "lines": 2
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Model 26B berlisensi Apache bisa jalan offline di laptop dan menyalip model 27B di coding agent. Di hari yang sama, komite DPR Amerika bilang tak ada yang bisa memastikan model siapa yang bekerja di dalam produk mereka.",
+        "width": 306,
+        "characters": 219,
+        "lines": 6
+      },
+      {
+        "selector": "meta",
+        "text": "23 November 2026",
+        "width": 306,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "25",
+        "width": 32,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "Semua edisi dan arsip topik",
+        "width": 167,
+        "characters": 27,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Membicarakan proyek",
+        "width": 350,
+        "characters": 19,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Untuk pekerjaan project management, implementasi HRIS, atau membangun produk AI bersama.",
+        "width": 350,
+        "characters": 88,
+        "lines": 3
+      },
+      {
+        "selector": "P",
+        "text": "Kirim satu paragraf soal masalahnya, bukan lampiran tender.",
+        "width": 350,
+        "characters": 59,
+        "lines": 2
+      },
+      {
+        "selector": "text-link mail",
+        "text": "mail@yunarprawira.com",
+        "width": 240,
+        "characters": 21,
+        "lines": 1
+      }
+    ]
+  },
+  "en-1440": {
+    "viewport": 1440,
+    "height": 1990,
+    "scroll": 1440,
+    "client": 1440,
+    "edges": [
+      240,
+      1136
+    ],
+    "blocks": [
+      {
+        "selector": "H1",
+        "text": "Yunar Prawira",
+        "width": 960,
+        "characters": 13,
+        "lines": 1
+      },
+      {
+        "selector": "role",
+        "text": "Project manager · HR technology implementation",
+        "width": 960,
+        "characters": 46,
+        "lines": 1
+      },
+      {
+        "selector": "lede",
+        "text": "I implement HR systems in large companies. I also build my own AI products and write about what I learn from both.",
+        "width": 960,
+        "characters": 114,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Kilas",
+        "width": 960,
+        "characters": 5,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "An AI brief published three times a week: models, research, and how AI changes work. Every figure links to its source.",
+        "width": 960,
+        "characters": 118,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "Read Kilas",
+        "width": 63,
+        "characters": 10,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Portfolio",
+        "width": 960,
+        "characters": 9,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Enterprise implementation case studies: situations, decisions, results, and lessons I take into the next project.",
+        "width": 960,
+        "characters": 113,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "Open portfolio on Notion",
+        "width": 156,
+        "characters": 24,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Latest editions of Kilas",
+        "width": 960,
+        "characters": 24,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "98 percent pass, a quarter match",
+        "width": 309,
+        "characters": 32,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Anthropic's test suite passes 98%, but only a quarter of production inputs match. On the same day, Nvidia stops shipping servers to Indonesia, and MCP servers can send instructions that nobody reads.",
+        "width": 631,
+        "characters": 199,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "27 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "27",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Boundaries that only work when written down",
+        "width": 447,
+        "characters": 43,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Six Claude models try to escape a sandbox in 21-32% of scenarios, but only 0.6-1.6% misuse it. Explicitly written boundaries change behaviour, and this week three companies put those boundaries where they can be read.",
+        "width": 631,
+        "characters": 217,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "25 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "26",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Twenty gigabytes, and origins that cannot be seen",
+        "width": 478,
+        "characters": 49,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "An Apache-licensed 26B model can run offline on a laptop and outperform a 27B model in a coding agent. On the same day, a US House committee says nobody can be certain whose model is working inside their products.",
+        "width": 631,
+        "characters": 213,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "23 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "25",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "All editions and topic archives",
+        "width": 183,
+        "characters": 31,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Discuss a project",
+        "width": 960,
+        "characters": 17,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "For project management, HRIS implementation, or building an AI product together.",
+        "width": 960,
+        "characters": 80,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Send a paragraph about the problem, not a tender attachment.",
+        "width": 960,
+        "characters": 60,
+        "lines": 1
+      },
+      {
+        "selector": "text-link mail",
+        "text": "mail@yunarprawira.com",
+        "width": 240,
+        "characters": 21,
+        "lines": 1
+      }
+    ]
+  },
+  "en-1280": {
+    "viewport": 1280,
+    "height": 1990,
+    "scroll": 1280,
+    "client": 1280,
+    "edges": [
+      160,
+      1056
+    ],
+    "blocks": [
+      {
+        "selector": "H1",
+        "text": "Yunar Prawira",
+        "width": 960,
+        "characters": 13,
+        "lines": 1
+      },
+      {
+        "selector": "role",
+        "text": "Project manager · HR technology implementation",
+        "width": 960,
+        "characters": 46,
+        "lines": 1
+      },
+      {
+        "selector": "lede",
+        "text": "I implement HR systems in large companies. I also build my own AI products and write about what I learn from both.",
+        "width": 960,
+        "characters": 114,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Kilas",
+        "width": 960,
+        "characters": 5,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "An AI brief published three times a week: models, research, and how AI changes work. Every figure links to its source.",
+        "width": 960,
+        "characters": 118,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "Read Kilas",
+        "width": 63,
+        "characters": 10,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Portfolio",
+        "width": 960,
+        "characters": 9,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Enterprise implementation case studies: situations, decisions, results, and lessons I take into the next project.",
+        "width": 960,
+        "characters": 113,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "Open portfolio on Notion",
+        "width": 156,
+        "characters": 24,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Latest editions of Kilas",
+        "width": 960,
+        "characters": 24,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "98 percent pass, a quarter match",
+        "width": 309,
+        "characters": 32,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Anthropic's test suite passes 98%, but only a quarter of production inputs match. On the same day, Nvidia stops shipping servers to Indonesia, and MCP servers can send instructions that nobody reads.",
+        "width": 631,
+        "characters": 199,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "27 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "27",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Boundaries that only work when written down",
+        "width": 447,
+        "characters": 43,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Six Claude models try to escape a sandbox in 21-32% of scenarios, but only 0.6-1.6% misuse it. Explicitly written boundaries change behaviour, and this week three companies put those boundaries where they can be read.",
+        "width": 631,
+        "characters": 217,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "25 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "26",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Twenty gigabytes, and origins that cannot be seen",
+        "width": 478,
+        "characters": 49,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "An Apache-licensed 26B model can run offline on a laptop and outperform a 27B model in a coding agent. On the same day, a US House committee says nobody can be certain whose model is working inside their products.",
+        "width": 631,
+        "characters": 213,
+        "lines": 3
+      },
+      {
+        "selector": "meta",
+        "text": "23 November 2026",
+        "width": 872,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "25",
+        "width": 64,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "All editions and topic archives",
+        "width": 183,
+        "characters": 31,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Discuss a project",
+        "width": 960,
+        "characters": 17,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "For project management, HRIS implementation, or building an AI product together.",
+        "width": 960,
+        "characters": 80,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Send a paragraph about the problem, not a tender attachment.",
+        "width": 960,
+        "characters": 60,
+        "lines": 1
+      },
+      {
+        "selector": "text-link mail",
+        "text": "mail@yunarprawira.com",
+        "width": 240,
+        "characters": 21,
+        "lines": 1
+      }
+    ]
+  },
+  "en-390": {
+    "viewport": 390,
+    "height": 2479,
+    "scroll": 390,
+    "client": 390,
+    "edges": [
+      20,
+      338
+    ],
+    "blocks": [
+      {
+        "selector": "H1",
+        "text": "Yunar Prawira",
+        "width": 350,
+        "characters": 13,
+        "lines": 1
+      },
+      {
+        "selector": "role",
+        "text": "Project manager · HR technology implementation",
+        "width": 350,
+        "characters": 46,
+        "lines": 2
+      },
+      {
+        "selector": "lede",
+        "text": "I implement HR systems in large companies. I also build my own AI products and write about what I learn from both.",
+        "width": 350,
+        "characters": 114,
+        "lines": 3
+      },
+      {
+        "selector": "H2",
+        "text": "Kilas",
+        "width": 350,
+        "characters": 5,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "An AI brief published three times a week: models, research, and how AI changes work. Every figure links to its source.",
+        "width": 350,
+        "characters": 118,
+        "lines": 3
+      },
+      {
+        "selector": "text-link",
+        "text": "Read Kilas",
+        "width": 63,
+        "characters": 10,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Portfolio",
+        "width": 350,
+        "characters": 9,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "Enterprise implementation case studies: situations, decisions, results, and lessons I take into the next project.",
+        "width": 350,
+        "characters": 113,
+        "lines": 3
+      },
+      {
+        "selector": "text-link",
+        "text": "Open portfolio on Notion",
+        "width": 156,
+        "characters": 24,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Latest editions of Kilas",
+        "width": 350,
+        "characters": 24,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "98 percent pass, a quarter match",
+        "width": 306,
+        "characters": 32,
+        "lines": 2
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Anthropic's test suite passes 98%, but only a quarter of production inputs match. On the same day, Nvidia stops shipping servers to Indonesia, and MCP servers can send instructions that nobody reads.",
+        "width": 306,
+        "characters": 199,
+        "lines": 5
+      },
+      {
+        "selector": "meta",
+        "text": "27 November 2026",
+        "width": 306,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "27",
+        "width": 32,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Boundaries that only work when written down",
+        "width": 306,
+        "characters": 43,
+        "lines": 2
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "Six Claude models try to escape a sandbox in 21-32% of scenarios, but only 0.6-1.6% misuse it. Explicitly written boundaries change behaviour, and this week three companies put those boundaries where they can be read.",
+        "width": 306,
+        "characters": 217,
+        "lines": 6
+      },
+      {
+        "selector": "meta",
+        "text": "25 November 2026",
+        "width": 306,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "26",
+        "width": 32,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "edisi-judul",
+        "text": "Twenty gigabytes, and origins that cannot be seen",
+        "width": 306,
+        "characters": 49,
+        "lines": 2
+      },
+      {
+        "selector": "edisi-ringkas",
+        "text": "An Apache-licensed 26B model can run offline on a laptop and outperform a 27B model in a coding agent. On the same day, a US House committee says nobody can be certain whose model is working inside their products.",
+        "width": 306,
+        "characters": 213,
+        "lines": 6
+      },
+      {
+        "selector": "meta",
+        "text": "23 November 2026",
+        "width": 306,
+        "characters": 16,
+        "lines": 1
+      },
+      {
+        "selector": "edition-number",
+        "text": "25",
+        "width": 32,
+        "characters": 2,
+        "lines": 1
+      },
+      {
+        "selector": "text-link",
+        "text": "All editions and topic archives",
+        "width": 183,
+        "characters": 31,
+        "lines": 1
+      },
+      {
+        "selector": "H2",
+        "text": "Discuss a project",
+        "width": 350,
+        "characters": 17,
+        "lines": 1
+      },
+      {
+        "selector": "P",
+        "text": "For project management, HRIS implementation, or building an AI product together.",
+        "width": 350,
+        "characters": 80,
+        "lines": 2
+      },
+      {
+        "selector": "P",
+        "text": "Send a paragraph about the problem, not a tender attachment.",
+        "width": 350,
+        "characters": 60,
+        "lines": 2
+      },
+      {
+        "selector": "text-link mail",
+        "text": "mail@yunarprawira.com",
+        "width": 240,
+        "characters": 21,
+        "lines": 1
+      }
+    ]
+  }
+}

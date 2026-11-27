@@ -1,0 +1,66 @@
+[
+  {
+    "href": "#kilas",
+    "result": "PASS"
+  },
+  {
+    "href": "/cv/",
+    "result": "PASS"
+  },
+  {
+    "href": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23D70015' d='M0 0h24v24H0z'/></svg>",
+    "result": "inline SVG"
+  },
+  {
+    "href": "https://kilas.yunarprawira.com/",
+    "status": 200,
+    "final": "https://kilas.yunarprawira.com/",
+    "bytes": 24920
+  },
+  {
+    "href": "https://kilas.yunarprawira.com/2026-11-23-edisi-25.html",
+    "status": 200,
+    "final": "https://kilas.yunarprawira.com/2026-11-23-edisi-25.html",
+    "bytes": 14730
+  },
+  {
+    "href": "https://kilas.yunarprawira.com/2026-11-25-edisi-26.html",
+    "status": 200,
+    "final": "https://kilas.yunarprawira.com/2026-11-25-edisi-26.html",
+    "bytes": 14300
+  },
+  {
+    "href": "https://kilas.yunarprawira.com/2026-11-27-edisi-27.html",
+    "status": 200,
+    "final": "https://kilas.yunarprawira.com/2026-11-27-edisi-27.html",
+    "bytes": 14565
+  },
+  {
+    "href": "https://kilas.yunarprawira.com/feed.xml",
+    "status": 200,
+    "final": "https://kilas.yunarprawira.com/feed.xml",
+    "bytes": 15059
+  },
+  {
+    "href": "https://linkedin.com/in/yunarprawira",
+    "status": 200,
+    "final": "https://linkedin.com/in/yunarprawira",
+    "bytes": 21252
+  },
+  {
+    "href": "https://valiant-headstand-331.notion.site/Yunar-s-Portfolio-3bad563c825c804e9167ed2d68f1b0c6",
+    "status": 200,
+    "final": "https://valiant-headstand-331.notion.site/Yunar-s-Portfolio-3bad563c825c804e9167ed2d68f1b0c6",
+    "bytes": 23803
+  },
+  {
+    "href": "https://yunarprawira.com/",
+    "status": 200,
+    "final": "https://www.yunarprawira.com/",
+    "bytes": 14100
+  },
+  {
+    "href": "mailto:mail@yunarprawira.com",
+    "result": "mail URI; delivery not tested"
+  }
+]

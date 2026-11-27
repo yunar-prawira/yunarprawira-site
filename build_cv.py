@@ -105,11 +105,11 @@ TEMPLATE = """<!doctype html>
 <meta property="og:title" content="CV — Yunar Prawira Negara">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://www.yunarprawira.com/cv/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%237A2E2E'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23D70015'/></svg>">
 <style>
 :root{
   --bg:#FDFCF9; --surface:#F7F4EE; --ink:#16130F; --muted:#6E6659;
-  --hairline:#E0D9CB; --accent:#7A2E2E;
+  --hairline:#E0D9CB; --accent:#D70015;
   --display:"Bitstream Charter", Charter, "Liberation Serif", Georgia, serif;
   --body:Lato, "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
   --mono:"DejaVu Sans Mono", "Liberation Mono", monospace;
