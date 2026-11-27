@@ -53,7 +53,7 @@ h1{font-size:var(--hero);line-height:1.05;letter-spacing:-.04em}
 
 /* ---------- tombol ---------- */
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:196px;
   padding:12px 20px;border:1px solid var(--accent);border-radius:2px;
   font-family:var(--body);font-size:var(--text);font-weight:600;line-height:1.2;
   color:#FFFFFF;background:var(--accent);cursor:pointer}
@@ -71,7 +71,7 @@ h2{font-size:var(--heading);line-height:1.4}
 .proof .val{display:block;font-family:var(--mono);font-size:20px;
   font-variant-numeric:tabular-nums;color:var(--accent);letter-spacing:-.01em}
 .proof .lbl{display:block;margin-top:4px;font-size:var(--small);color:var(--muted);
-  line-height:1.45;max-width:32ch}
+  line-height:1.45;max-width:32ch;min-height:calc(2 * 1.45em)}
 
 /* ---------- selected work ---------- */
 .work{list-style:none;margin:24px 0 0;padding:0}
@@ -89,7 +89,7 @@ h2{font-size:var(--heading);line-height:1.4}
 .daftar-edisi{list-style:none;padding:0;margin:24px 0 0}
 .edisi{padding-block:8px;border-top:1px solid var(--hairline)}
 .edisi-judul{display:inline-flex;align-items:center;min-height:44px;font-family:var(--display);font-size:20px;line-height:1.35}
-.edisi-ringkas{max-width:var(--measure);margin-top:6px;color:var(--muted);font-size:var(--small);
+.edisi-ringkas{max-width:66ch;margin-top:6px;color:var(--muted);font-size:var(--small);
   line-height:1.5}
 .edisi-meta{display:flex;flex-wrap:nowrap;align-items:baseline;gap:16px;margin-top:2px;
   font-family:var(--mono);font-size:var(--label);color:var(--muted)}
