@@ -10,6 +10,7 @@ SITE="https://www.yunarprawira.com"
 
 python3 build.py
 python3 build_cv.py
+./verify.sh
 python3 - <<'PY'
 # gerbang wajib: tidak boleh push kalau placeholder masih tersisa
 import pathlib, re, sys
