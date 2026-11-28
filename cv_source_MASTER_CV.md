@@ -2,7 +2,7 @@
 
 **Senior Project Manager / Delivery Lead — HR Tech & Enterprise SaaS**
 
-Nagrak, Gunung Putri, Bogor Regency / Jakarta, Indonesia · +62 851-5652-5270 · mail@yunarprawira.com
+Jakarta, Indonesia · mail@yunarprawira.com
 linkedin.com/in/yunarprawira · github.com/yunar-prawira · Portfolio: https://app.notion.com/p/Yunar-s-Portfolio-3bad563c825c804e9167ed2d68f1b0c6
 
 ## Professional Summary
@@ -28,13 +28,13 @@ Jul 2026 – Present | Remote, Indonesia
 - Building RumahNY, a household operations mobile app for iOS and Android — task management, responsibility assignment, habit tracking and shared work visibility.
 - Owns the full loop alone: problem framing, scope, build, deploy, iterate.
 
-### Darwinbox Digital Solutions — Project Manager, Enterprise HCM / HR Tech SaaS Delivery
+### Enterprise HR SaaS Platform — Project Manager, Enterprise HCM / HR Tech Delivery
 
 Feb 2022 – Apr 2026 | Jakarta, Indonesia
 
 - Delivered enterprise HCM SaaS implementations end to end — discovery, process mapping, requirements, UAT, go-live, hypercare and adoption — coordinating product, engineering and integration teams on platform gaps and release readiness.
 - Project Manager on 10 of 11 implementations across Indonesia and Vietnam, covering 51,500 employees and 108 legal entities in banking, manufacturing, consumer goods, logistics and healthcare.
-- Managed delivery plans, milestones, risks and sign-offs for named accounts: OCB Bank Vietnam, Perum BULOG, Baramulti Group, FKS Group (40+ companies), BTPN, Eka Hospital, Home Credit Indonesia, Indexim, Gunung Raja Paksi, Linfox Logistics and MAP Group.
+- Managed delivery plans, milestones, risks and sign-offs across enterprise accounts: a major bank in Vietnam, a national food BUMN, consumer goods groups, a national digital bank, hospitals, and logistics and retail groups.
 - Built the Indonesia Gold Instance deployment model to standardise rollouts for enterprise clients with 5,000+ employees; estimated 20–30% faster implementation rollout.
 - Established the S.T.R.I.K.E. task force to standardise audit and anomaly response on critical escalations.
 
@@ -42,8 +42,8 @@ Feb 2022 – Apr 2026 | Jakarta, Indonesia
 
 Aug 2019 – Jan 2022 | Jakarta, Indonesia
 
-- Delivered HRIS implementations for enterprise clients including Unicharm Indonesia and BECIS.
-- Delivered the BECIS enterprise HR platform implementation in 30 calendar days and received Best Employee of the Year recognition.
+- Delivered HRIS implementations for enterprise clients in consumer goods and energy.
+- Delivered an enterprise HR platform implementation in 30 calendar days and received Best Employee of the Year recognition.
 - Ran client discovery, product demos and proof-of-concept sessions for new opportunities, translating HR process needs into system scope.
 
 ### PT Bahana Sysfo Utama (BEPS), subsidiary of Bank Sinarmas — Human Resources Supervisor (HR Generalist)
@@ -71,11 +71,8 @@ Oct 2010 – Sep 2014 | Jakarta, Indonesia — PT Warna Warni Media, PT Astra Ot
 
 - 51,500 employees in implementation scope, per client 1,000–10,000; 108 legal entities, largest single group 40.
 - 10 clients in Indonesia and 1 in Vietnam, across banking, manufacturing, consumer goods, logistics and hospitals.
-- DARR contribution USD 564K of USD 891K Indonesia delivery (FY 2025/26).
-- NPS 50 against a threshold of 45; project margin variance +10% against +5%; billable utilisation 73.94% against 70%.
-- Go-live in 51 calendar days for OCB Bank Vietnam and 100 calendar days for FKS Group Phase 1; BECIS enterprise platform live in 30 calendar days.
-- Indexim HRMS rollout across 8 entities in approximately 2.5 months.
-- Latest performance review: Outperforms (OP).
+- Go-live in 51 calendar days for a major bank in Vietnam and 100 calendar days for Phase 1 of a consumer goods group; an enterprise HR platform live in 30 calendar days.
+- An HRMS rollout across 8 legal entities in approximately 2.5 months.
 
 ## Products & Automation
 

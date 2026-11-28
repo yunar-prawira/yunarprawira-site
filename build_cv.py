@@ -100,7 +100,7 @@ TEMPLATE = """<!doctype html>
 <title>CV — Yunar Prawira Negara</title>
 <meta name="description" content="CV Yunar Prawira Negara — Senior Project Manager / Delivery Lead, HR Tech &amp; Enterprise SaaS. Lima belas tahun, 51.500 karyawan dalam lingkup implementasi.">
 <meta name="color-scheme" content="light">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="noindex,nofollow">
 <link rel="canonical" href="https://www.yunarprawira.com/cv/">
 <meta property="og:title" content="CV — Yunar Prawira Negara">
 <meta property="og:type" content="profile">
