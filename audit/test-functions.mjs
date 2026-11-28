@@ -123,7 +123,20 @@ function fakeKV(initial = {}) {
   const store = new Map(Object.entries(initial));
   return {
     _store: store,
-    async get(k) { return store.has(k) ? store.get(k) : null; },
+    // KV asli: get(key) -> string, get(key, "arrayBuffer") -> ArrayBuffer,
+    // get(key, "json") -> objek. Mock harus meniru ini; kalau tidak, jalur
+    // arrayBuffer (dipakai untuk PDF) tidak pernah benar-benar diuji.
+    async get(k, type) {
+      if (!store.has(k)) return null;
+      const v = store.get(k);
+      if (type === "arrayBuffer") {
+        if (v instanceof ArrayBuffer) return v;
+        if (ArrayBuffer.isView(v)) return v.buffer.slice(v.byteOffset, v.byteOffset + v.byteLength);
+        return new TextEncoder().encode(String(v)).buffer;
+      }
+      if (type === "json") return JSON.parse(String(v));
+      return typeof v === "string" ? v : String(v);
+    },
     async put(k, v) { store.set(k, v); },
   };
 }
@@ -262,6 +275,67 @@ if (!pdfPath) {
     request: new Request(`https://x/api/download-cv?t=${encodeURIComponent(expiredToken)}`), env: dlEnv,
   });
   check("token kedaluwarsa -> 403", expiredRes.status === 403, String(expiredRes.status));
+}
+
+/* ── jalur KV: ini yang dipakai produksi ───────────────────────────────────
+ * PDF 78 KB menjadi ~104 KB base64, sedangkan env var Cloudflare dibatasi
+ * ~5 KB, jadi CV_PDF_B64 mustahil untuk CV sungguhan. Produksi memakai KV
+ * (key cv:full). Semua tes di atas memakai base64, jadi jalur KV tidak pernah
+ * diuji — persis kelas "hijau tapi buta" yang sudah dua kali menipu di repo ini.
+ */
+{
+  const pdfBytes = readFileSync(pdfPath);
+  // Seed lewat parameter constructor: fakeKV menutup variabel `store` lokal,
+  // jadi menyetel `_store` dari luar tidak berpengaruh apa pun.
+  const kv = fakeKV({ "cv:full": pdfBytes });
+
+  const kvEnv = {
+    CV_DOWNLOADS: kv,
+    CV_TOKEN_SECRET: SECRET,
+    // sengaja TIDAK ada CV_PDF_B64 / CV_PDF: membuktikan KV yang melayani
+  };
+  const t = await reqMod.signToken(
+    { email: "kv@contoh.co", exp: Math.floor(Date.now() / 1000) + 600, jti: "kv1" }, SECRET);
+  const r = await dlMod.onRequestGet({
+    request: new Request(`https://x/api/download-cv?t=${encodeURIComponent(t)}`), env: kvEnv,
+  });
+
+  check("KV: unduhan 200 tanpa CV_PDF_B64", r.status === 200, String(r.status));
+  const body = r.status === 200 ? Buffer.from(await r.arrayBuffer()) : Buffer.alloc(0);
+  check("KV: body adalah PDF utuh", body.subarray(0, 5).toString() === "%PDF-",
+    body.subarray(0, 5).toString());
+  check("KV: PDF lebih besar dari 10 KB", body.length > 10_000, `${body.length} byte`);
+
+  if (body.length) {
+    writeFileSync("/tmp/_kv_e2e.pdf", body);
+    let kvText = "";
+    try { kvText = execFileSync("pdftotext", ["/tmp/_kv_e2e.pdf", "-"], { encoding: "utf8" }); }
+    catch { kvText = ""; }
+    check("KV: footer TERLIHAT saat dirender", kvText.includes("kv@contoh.co"),
+      "footer tidak muncul di PDF dari jalur KV");
+  }
+
+  // Tanpa PDF di KV dan tanpa base64 -> 503, bukan 500 atau PDF kosong.
+  const emptyEnv = { CV_DOWNLOADS: fakeKV(), CV_TOKEN_SECRET: SECRET };
+  const t2 = await reqMod.signToken(
+    { email: "x@y.co", exp: Math.floor(Date.now() / 1000) + 600, jti: "kv2" }, SECRET);
+  const r2 = await dlMod.onRequestGet({
+    request: new Request(`https://x/api/download-cv?t=${encodeURIComponent(t2)}`), env: emptyEnv,
+  });
+  check("PDF tidak tersedia -> 503 (bukan crash)", r2.status === 503, String(r2.status));
+
+  // PDF rusak/terpotong: pdf-lib melempar. Dulu ini jadi 500 (kegagalan server),
+  // padahal masalahnya data. Harus 503, dan tidak boleh menaikkan counter.
+  const broken = fakeKV({ "cv:full": Buffer.from("%PDF-1.4\nrusak tanpa trailer") });
+  const brokenEnv = { CV_DOWNLOADS: broken, CV_TOKEN_SECRET: SECRET };
+  const t3 = await reqMod.signToken(
+    { email: "x@y.co", exp: Math.floor(Date.now() / 1000) + 600, jti: "broke" }, SECRET);
+  const r3 = await dlMod.onRequestGet({
+    request: new Request(`https://x/api/download-cv?t=${encodeURIComponent(t3)}`), env: brokenEnv,
+  });
+  check("PDF rusak -> 503 (bukan 500/crash)", r3.status === 503, String(r3.status));
+  check("PDF rusak tidak menaikkan counter unduhan",
+    !broken._store.has("dl:broke"), String([...broken._store.keys()]));
 }
 
 /* ── laporan ────────────────────────────────────────────────────────────── */

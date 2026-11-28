@@ -11,6 +11,8 @@
  */
 
 const MAX_DOWNLOADS = 3;
+// Kunci KV tempat PDF sumber disimpan (diunggah lewat scripts/upload-cv.sh).
+const PDF_KEY = "cv:full";
 
 export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
@@ -31,7 +33,17 @@ export async function onRequestGet({ request, env }) {
   const source = await loadPdfBytes(env);
   if (!source) return html(errorPage("CV sedang tidak tersedia. Coba lagi nanti."), 503);
 
-  const stamped = await stampFooter(source, payload.email, env);
+  // Byte PDF yang rusak/terpotong (mis. sisa unggahan gagal ke KV) membuat
+  // pdf-lib melempar. Tanpa penangkap ini Worker balas 500 dan tercatat sebagai
+  // kegagalan server, padahal masalahnya data. Perlakuan yang benar: 503.
+  let stamped;
+  try {
+    stamped = await stampFooter(source, payload.email, env);
+  } catch {
+    return html(errorPage("CV sedang tidak tersedia. Coba lagi nanti."), 503);
+  }
+  if (!stamped) return html(errorPage("CV sedang tidak tersedia. Coba lagi nanti."), 503);
+
   await env.CV_DOWNLOADS.put(countKey, String(used + 1), { expirationTtl: 7 * 24 * 60 * 60 });
 
   return new Response(stamped, {
@@ -53,7 +65,19 @@ async function loadPdfBytes(env) {
     if (obj) return new Uint8Array(await obj.arrayBuffer());
     return null;
   }
+  // KV: satu-satunya jalur yang tidak butuh kredensial baru maupun R2 (yang
+  // harus diaktifkan di dashboard). Batas nilai KV 25 MiB, CV hanya ~78 KB.
+  if (env.CV_DOWNLOADS && typeof env.CV_DOWNLOADS.get === "function") {
+    try {
+      const buf = await env.CV_DOWNLOADS.get(PDF_KEY, "arrayBuffer");
+      if (buf) return new Uint8Array(buf);
+    } catch {
+      /* jatuh ke jalur base64 di bawah */
+    }
+  }
   if (env.CV_PDF_B64) {
+    // Hanya untuk PDF kecil. Env var Cloudflare dibatasi ~5 KB, jadi PDF 78 KB
+    // (base64 ~104 KB) TIDAK akan pernah muat di sini — jangan mengandalkannya.
     try {
       const bin = atob(env.CV_PDF_B64);
       return Uint8Array.from(bin, (c) => c.charCodeAt(0));
