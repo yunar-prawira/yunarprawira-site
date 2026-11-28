@@ -18,7 +18,7 @@ bocor.
 Metrik inti `/` mobile: FCP 1.0 s · LCP 1.0 s · TBT 0 ms · CLS 0 · SI 1.4 s.
 Desktop: FCP 0.5 s · LCP 0.5 s · TBT 0 ms · CLS 0.
 
-Perintah:
+Hasil mentah Lighthouse tidak disimpan di repo (1.5MB); regenerasi dengan perintah di bawah. Perintah:
 ```
 CHROME_PATH=/usr/bin/google-chrome npx lighthouse@13 <url> \
   --only-categories=performance,accessibility,best-practices,seo \
