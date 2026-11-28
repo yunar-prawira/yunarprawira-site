@@ -2,7 +2,7 @@
 
 **Senior Project Manager / Delivery Lead — HR Tech & Enterprise SaaS**
 
-Nagrak, Gunung Putri, Bogor Regency / Jakarta, Indonesia · +62 851-5652-5270 · yunarpn@gmail.com
+Nagrak, Gunung Putri, Bogor Regency / Jakarta, Indonesia · +62 851-5652-5270 · mail@yunarprawira.com
 linkedin.com/in/yunarprawira · github.com/yunar-prawira · Portfolio: https://app.notion.com/p/Yunar-s-Portfolio-3bad563c825c804e9167ed2d68f1b0c6
 
 ## Professional Summary

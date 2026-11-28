@@ -180,7 +180,7 @@ footer a{min-height:44px;display:inline-flex;align-items:center}
 
 <footer class="wrap">
   <span>Yunar Prawira · 2026</span>
-  <a href="mailto:yunarpn@gmail.com">yunarpn@gmail.com</a>
+  <a href="mailto:mail@yunarprawira.com">mail@yunarprawira.com</a>
   <a href="https://www.linkedin.com/in/yunarprawira">linkedin.com/in/yunarprawira</a>
 </footer>
 
