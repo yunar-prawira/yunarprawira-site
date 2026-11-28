@@ -177,8 +177,20 @@ def esc(s: str) -> str:
 
 def ambil_edisi(limit: int = 3):
     """Ambil edisi terbaru dari feed RSS Kilas. Gagal -> list kosong."""
+    # Sejak Kilas pindah ke Cloudflare (28 Nov 2026), Cloudflare Bot Fight Mode
+    # menolak request tanpa User-Agent yang dikenal dengan `error code: 1010`.
+    # urllib default mengirim "Python-urllib/x.y" -> 403, sehingga daftar edisi
+    # di homepage hilang tanpa build gagal. UA di bawah bukan penyamaran:
+    # ini build process milik domain sendiri, dan UA-nya jujur menyebut diri.
+    req = urllib.request.Request(
+        FEED,
+        headers={
+            "User-Agent": "yunarprawira-site-build/1.0 (+https://www.yunarprawira.com)",
+            "Accept": "application/rss+xml, application/xml;q=0.9, */*;q=0.8",
+        },
+    )
     try:
-        with urllib.request.urlopen(FEED, timeout=15) as r:
+        with urllib.request.urlopen(req, timeout=15) as r:
             root = ET.fromstring(r.read())
     except Exception as e:  # noqa: BLE001 - build tidak boleh mati karena jaringan
         print(f"peringatan: feed Kilas tidak terbaca ({e.__class__.__name__})", file=sys.stderr)
