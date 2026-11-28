@@ -28,7 +28,7 @@ Jul 2026 – Present | Remote, Indonesia
 - Building RumahNY, a household operations mobile app for iOS and Android — task management, responsibility assignment, habit tracking and shared work visibility.
 - Owns the full loop alone: problem framing, scope, build, deploy, iterate.
 
-### Enterprise HR SaaS Platform — Project Manager, Enterprise HCM / HR Tech Delivery
+### Darwinbox — Project Manager, Enterprise HCM / HR Tech Delivery
 
 Feb 2022 – Apr 2026 | Jakarta, Indonesia
 
