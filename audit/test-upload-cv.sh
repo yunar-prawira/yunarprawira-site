@@ -15,18 +15,19 @@ ok()   { echo "PASS  $1"; }
 bad()  { echo "FAIL  $1  <- $2"; fails=$((fails+1)); }
 
 # ── gerbang isi harus menolak PDF bertelepon ─────────────────────────────
-out=$(./scripts/upload-cv.sh "$DIRTY" 2>&1); rc=$?
+# Pakai --check: tes TIDAK boleh menulis ke KV. Tanpa ini, menguji penolakan
+# justru mengunggah PDF kotor ke produksi (pernah terjadi).
+out=$(./scripts/upload-cv.sh --check "$DIRTY" 2>&1); rc=$?
 [ "$rc" -ne 0 ] && ok "upload-cv.sh menolak PDF bertelepon" \
                 || bad "upload-cv.sh menolak PDF bertelepon" "exit=$rc, malah lolos"
 printf '%s' "$out" | grep -q "DITOLAK" && ok "  ... dengan pesan DITOLAK" \
                 || bad "  ... dengan pesan DITOLAK" "${out:0:80}"
 printf '%s' "$out" | grep -q "+62 851" && ok "  ... menyebut baris pelanggar" \
                 || bad "  ... menyebut baris pelanggar" "${out:0:80}"
-# Pesan sukses tidak boleh muncul saat ditolak
 printf '%s' "$out" | grep -q "terunggah" && bad "  ... tidak mengunggah apa pun" "ada 'terunggah'" \
                 || ok "  ... tidak mengunggah apa pun"
 
-# ── file bersih harus lolos gerbang (tanpa benar-benar mengunggah) ───────
+# ── file bersih harus lolos gerbang dan --check harus menahan unggahan ───
 # Jalankan logika gerbangnya saja: sumber di-santitasi lalu diperiksa.
 tmp=$(mktemp -d)
 python3 "$MIG/sanitize_cv_for_gate.py" "$SRC" "$tmp/gate.md" >/dev/null 2>&1
@@ -52,6 +53,14 @@ if [ -f "$CLEAN" ]; then
     && bad "CV-gate.pdf bebas telepon" "masih ada" || ok "CV-gate.pdf bebas telepon"
   printf '%s' "$t" | grep -q 'Jakarta, Indonesia · mail@yunarprawira.com' \
     && ok "CV-gate.pdf kontak kota+email" || bad "CV-gate.pdf kontak kota+email" "baris kontak beda"
+
+  # --check pada PDF bersih: gerbang lolos, TAPI tidak boleh mengunggah.
+  out2=$(./scripts/upload-cv.sh --check "$CLEAN" 2>&1); rc2=$?
+  [ "$rc2" -eq 0 ] && ok "PDF bersih lolos gerbang" || bad "PDF bersih lolos gerbang" "${out2:0:90}"
+  printf '%s' "$out2" | grep -q "mode --check: tidak mengunggah" \
+    && ok "  ... --check menahan unggahan" || bad "  ... --check menahan unggahan" "${out2:0:90}"
+  printf '%s' "$out2" | grep -q "terunggah:" \
+    && bad "  ... tidak ada tulisan ke KV" "ada 'terunggah:'" || ok "  ... tidak ada tulisan ke KV"
 else
   echo "SKIP  CV-gate.pdf belum dibangun"
 fi

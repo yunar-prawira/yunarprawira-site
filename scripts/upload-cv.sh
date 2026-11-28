@@ -6,7 +6,9 @@
 set -euo pipefail
 cd "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-PDF="${1:?pakai: ./scripts/upload-cv.sh <file.pdf>}"
+PDF="${1:?pakai: ./scripts/upload-cv.sh [--check] <file.pdf>}"
+CHECK_ONLY=0
+if [ "$PDF" = "--check" ]; then CHECK_ONLY=1; PDF="${2:?pakai: ./scripts/upload-cv.sh --check <file.pdf>}"; fi
 NS="1829c185845f484881752226f24c7461"
 ACC="e16aec68d39fadb19f9615e0131d49ba"
 
@@ -25,6 +27,11 @@ if printf '%s' "$CV_TEXT" | grep -qE '\+62|[0-9]{4}-[0-9]{4}-[0-9]{4}|0812|0813|
   exit 1
 fi
 echo "gerbang isi: bersih"
+
+if [ "$CHECK_ONLY" = "1" ]; then
+  echo "mode --check: tidak mengunggah"
+  exit 0
+fi
 
 TOKEN=$(cat ~/.hermes/secrets/cloudflare_token.txt)
 HTTP=$(curl -s -o /tmp/kvput.out -w '%{http_code}' -X PUT \
