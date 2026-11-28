@@ -9,12 +9,47 @@ satu aksen maroon) supaya /cv tidak terasa seperti situs lain.
 from __future__ import annotations
 
 import html
+import os
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SRC = ROOT / "cv_source_MASTER_CV.md"
 OUT = ROOT / "docs" / "cv" / "index.html"
+
+# Sitekey Turnstile publik. Bukan rahasia: nilainya memang tampil di HTML.
+# Ganti lewat env TURNSTILE_SITEKEY saat build, tanpa menyentuh kode.
+# Placeholder ini harus diganti dengan sitekey asli setelah Yunar membuat widget;
+# sampai itu terjadi, form tetap tampil tapi verifikasi akan gagal (dan mailto
+# fallback muncul), jadi tidak ada jalur yang diam-diam terbuka.
+TURNSTILE_SITEKEY = os.environ.get("TURNSTILE_SITEKEY", "0x4AAAAAAA_PLACEHOLDER")
+PLACEHOLDER_SITEKEY = "0x4AAAAAAA_PLACEHOLDER"
+
+# Penanda blok form di TEMPLATE. Saat sitekey belum asli, seluruh blok ini
+# diganti dengan versi mailto-only supaya tidak ada form yang pasti gagal.
+GATE_FORM_MARKER = "<!--GATE:FORM-->"
+GATE_BEGIN = "<!--GATE:BEGIN-->"
+GATE_END = "<!--GATE:END-->"
+GATE_MAILTO_ONLY = """<section class="cvgate" aria-labelledby="cvgate-title">
+  <h2 id="cvgate-title">Minta CV lengkap</h2>
+  <p class="cvgate-note">CV lengkap saya kirim lewat email, tanpa nomor telepon di dalamnya.
+  Tulis satu baris saja — siapa Anda dan untuk peran apa.</p>
+  <p><a class="cvgate-cta" href="mailto:mail@yunarprawira.com?subject=Permintaan%20CV%20lengkap">Minta CV lengkap lewat email</a></p>
+</section>"""
+
+
+def swap_gate(page: str, use_form: bool) -> str:
+    """Ganti seluruh blok antara GATE_BEGIN..GATE_END dengan bentuk yang sesuai.
+
+    Dipisah sebagai fungsi supaya bisa diuji tanpa menjalankan build penuh.
+    """
+    start = page.find(GATE_BEGIN)
+    end = page.find(GATE_END)
+    if start == -1 or end == -1 or end < start:
+        raise ValueError("penanda GATE:BEGIN/GATE:END tidak lengkap di TEMPLATE")
+    if use_form:
+        return page
+    return page[:start] + GATE_MAILTO_ONLY + page[end + len(GATE_END):]
 
 INTERNAL_MARK = "<!-- INTERNAL:"
 
@@ -86,10 +121,23 @@ def render(md: str) -> str:
 
 def main() -> None:
     body = render(SRC.read_text(encoding="utf-8"))
+    # Sitekey Turnstile bukan rahasia (memang tampil di HTML), tapi harus bisa
+    # diganti tanpa mengedit kode: env var menang, lalu nilai cadangan.
+    sitekey = os.environ.get("TURNSTILE_SITEKEY", TURNSTILE_SITEKEY)
     page = TEMPLATE.replace("{{BODY}}", body)
+
+    # Form gate hanya dirender kalau sitekey ASLI sudah ada. Dengan placeholder,
+    # Turnstile pasti menolak dan pengunjung hanya melihat error — lebih buruk
+    # daripada tombol mailto biasa. Ini menjaga janji PRD A3: selama gate B
+    # belum siap kredensialnya, jalur yang dipakai adalah mailto.
+    if sitekey == PLACEHOLDER_SITEKEY or not sitekey:
+        page = swap_gate(page, use_form=False)
+    else:
+        page = page.replace("{{TURNSTILE_SITEKEY}}", sitekey)
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(page, encoding="utf-8")
-    print(f"docs/cv/index.html ditulis ({len(page) // 1024} KB)")
+    print(f"docs/cv/index.html ditulis ({len(page) // 1024} KB, gate={'form' if sitekey != PLACEHOLDER_SITEKEY else 'mailto'})")
 
 
 TEMPLATE = """<!doctype html>
@@ -159,8 +207,33 @@ footer a{min-height:44px;display:inline-flex;align-items:center}
   main{padding:0}
   body{font-size:11pt}
   h2{page-break-after:avoid}
+  .cvgate{display:none}
 }
+/* Form permintaan CV lengkap */
+.cvgate{margin:3rem 0 1rem;padding:1.5rem 1.25rem;border:1px solid #e3e0d8;
+  border-radius:10px;background:#fbfaf7}
+.cvgate h2{margin:0 0 .4rem;font-size:1.15rem}
+.cvgate-note{margin:0 0 1.1rem;font-size:.9rem;color:#5b5b52;max-width:52ch;line-height:1.55}
+.cvgate label{display:block;font-size:.82rem;font-weight:600;margin-bottom:.35rem;
+  letter-spacing:.02em;text-transform:uppercase;color:#3a3a33}
+.cvgate input{width:100%;max-width:26rem;padding:.6rem .7rem;font:inherit;font-size:.95rem;
+  border:1px solid #cfc9bc;border-radius:6px;background:#fff;color:#1b2b45}
+.cvgate input:focus{outline:2px solid #b5762a;outline-offset:2px;border-color:#b5762a}
+.cvgate button{margin-top:1rem;padding:.62rem 1.15rem;font:inherit;font-size:.95rem;
+  font-weight:600;color:#fff;background:#b5762a;border:0;border-radius:6px;cursor:pointer;
+  min-height:44px}
+.cvgate button:hover{background:#9c6323}
+.cvgate button:disabled{opacity:.6;cursor:progress}
+.cvgate [data-cv-status]{margin:.9rem 0 0;font-size:.9rem}
+.cvgate [data-cv-status][data-kind=error]{color:#a12b1f}
+.cvgate [data-cv-status][data-kind=info]{color:#5b5b52}
+.cvgate [data-cv-mailto]{font-size:.9rem;margin:.6rem 0 0}
+.cvgate [data-cv-success] p{margin:0;font-size:.95rem;color:#1b2b45}
 </style>
+<!-- Turnstile: dimuat async, tidak memblokir render. Kalau gagal dimuat,
+     form tetap tampil dan mailto fallback yang dipakai. -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="../assets/cv-gate.js" defer></script>
 </head>
 <body>
 
@@ -177,6 +250,31 @@ footer a{min-height:44px;display:inline-flex;align-items:center}
 
 <main class="wrap">
 {{BODY}}
+
+<section class="cvgate" aria-labelledby="cvgate-title">
+<!--GATE:BEGIN-->
+  <h2 id="cvgate-title">Minta CV lengkap</h2>
+  <p class="cvgate-note">CV lengkap dikirim lewat email berisi tautan pribadi — berlaku 7 hari,
+  maksimal 3 unduhan. Email dipakai untuk mengirim CV ini saja.</p>
+
+  <form data-cv-gate action="/api/request-cv" method="post" novalidate>
+    <label for="cvgate-email">Email</label>
+    <input id="cvgate-email" name="email" type="email" required
+           autocomplete="email" placeholder="nama@perusahaan.com"
+           inputmode="email" spellcheck="false">
+    <div class="cf-turnstile" data-sitekey="{{TURNSTILE_SITEKEY}}" data-theme="light"></div>
+    <button type="submit">Kirim tautan CV</button>
+    <p data-cv-status role="status" aria-live="polite" hidden></p>
+    <p data-cv-mailto hidden>
+      Atau <a href="mailto:mail@yunarprawira.com?subject=Permintaan%20CV%20lengkap">minta langsung lewat email</a>.
+    </p>
+  </form>
+
+  <div data-cv-success hidden>
+    <p><strong>Terkirim.</strong> Cek inbox (dan folder spam) untuk tautan CV-nya.</p>
+  </div>
+<!--GATE:END-->
+</section>
 </main>
 
 <footer class="wrap">

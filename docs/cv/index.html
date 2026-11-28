@@ -65,8 +65,33 @@ footer a{min-height:44px;display:inline-flex;align-items:center}
   main{padding:0}
   body{font-size:11pt}
   h2{page-break-after:avoid}
+  .cvgate{display:none}
 }
+/* Form permintaan CV lengkap */
+.cvgate{margin:3rem 0 1rem;padding:1.5rem 1.25rem;border:1px solid #e3e0d8;
+  border-radius:10px;background:#fbfaf7}
+.cvgate h2{margin:0 0 .4rem;font-size:1.15rem}
+.cvgate-note{margin:0 0 1.1rem;font-size:.9rem;color:#5b5b52;max-width:52ch;line-height:1.55}
+.cvgate label{display:block;font-size:.82rem;font-weight:600;margin-bottom:.35rem;
+  letter-spacing:.02em;text-transform:uppercase;color:#3a3a33}
+.cvgate input{width:100%;max-width:26rem;padding:.6rem .7rem;font:inherit;font-size:.95rem;
+  border:1px solid #cfc9bc;border-radius:6px;background:#fff;color:#1b2b45}
+.cvgate input:focus{outline:2px solid #b5762a;outline-offset:2px;border-color:#b5762a}
+.cvgate button{margin-top:1rem;padding:.62rem 1.15rem;font:inherit;font-size:.95rem;
+  font-weight:600;color:#fff;background:#b5762a;border:0;border-radius:6px;cursor:pointer;
+  min-height:44px}
+.cvgate button:hover{background:#9c6323}
+.cvgate button:disabled{opacity:.6;cursor:progress}
+.cvgate [data-cv-status]{margin:.9rem 0 0;font-size:.9rem}
+.cvgate [data-cv-status][data-kind=error]{color:#a12b1f}
+.cvgate [data-cv-status][data-kind=info]{color:#5b5b52}
+.cvgate [data-cv-mailto]{font-size:.9rem;margin:.6rem 0 0}
+.cvgate [data-cv-success] p{margin:0;font-size:.95rem;color:#1b2b45}
 </style>
+<!-- Turnstile: dimuat async, tidak memblokir render. Kalau gagal dimuat,
+     form tetap tampil dan mailto fallback yang dipakai. -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="../assets/cv-gate.js" defer></script>
 </head>
 <body>
 
@@ -162,6 +187,15 @@ footer a{min-height:44px;display:inline-flex;align-items:center}
 <p class="p">Industrial &amp; Organisational Psychology — Universitas Katolik Atma Jaya, Jakarta (2004–2010).</p>
 <h2>Languages &amp; Availability</h2>
 <p class="p">Bahasa Indonesia (native) · English (professional working proficiency). Available immediately — open to Indonesia-based, hybrid, remote and regional Southeast Asia roles; occasional travel accepted.</p>
+
+<section class="cvgate" aria-labelledby="cvgate-title">
+<section class="cvgate" aria-labelledby="cvgate-title">
+  <h2 id="cvgate-title">Minta CV lengkap</h2>
+  <p class="cvgate-note">CV lengkap saya kirim lewat email, tanpa nomor telepon di dalamnya.
+  Tulis satu baris saja — siapa Anda dan untuk peran apa.</p>
+  <p><a class="cvgate-cta" href="mailto:mail@yunarprawira.com?subject=Permintaan%20CV%20lengkap">Minta CV lengkap lewat email</a></p>
+</section>
+</section>
 </main>
 
 <footer class="wrap">

@@ -4,3 +4,6 @@ live-*.png
 final-*.png
 audit.json
 __pycache__/
+.dev.vars
+node_modules/
+.wrangler/

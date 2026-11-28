@@ -1,0 +1,14 @@
+name = "yunarprawira"
+compatibility_date = "2026-11-01"
+pages_build_output_dir = "docs"
+
+# KV untuk rate-limit dan hitungan unduhan.
+# Dibuat lewat: wrangler kv namespace create CV_DOWNLOADS
+# lalu id-nya ditulis di sini.
+[[kv_namespaces]]
+binding = "CV_DOWNLOADS"
+id = "1829c185845f484881752226f24c7461"
+
+# Catatan: PDF lengkap TIDAK diletakkan di docs/. Ia dikirim sebagai
+# CV_PDF_B64 / binding R2 (CV_PDF) supaya tidak bisa diunduh langsung
+# tanpa melewati gate. Lihat functions/api/download-cv.js.
