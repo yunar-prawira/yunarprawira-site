@@ -78,6 +78,14 @@ check("  tidak ada {{...}} tersisa", "{{" not in html)
 check("  tetap noindex", 'content="noindex,nofollow"' in html)
 check("  data pribadi tetap bersih",
       not any(k in html for k in ("+62 851", "yunarpn@gmail.com", "Nagrak", "Gunung Putri")))
+# Regresi nyata: swap_gate pernah menyisipkan <section> DI DALAM <section>,
+# menghasilkan landmark bersarang (axe landmark-unique). Jumlah pembungkus
+# gate harus tetap satu, bukan dua.
+check("  gate section tidak bersarang", html.count('class="cvgate"') == 1,
+      f'ada {html.count(chr(34) + "cvgate" + chr(34))} section cvgate')
+check("  masthead berupa landmark <header>", '<header class="masthead">' in html)
+check("  nav punya aria-label", '<nav aria-label="Navigasi utama">' in html)
+check("  print tetap sembunyikan masthead", ".masthead,footer{display:none}" in html)
 
 rc, log, html = build("0x4AAAAAAA_REALKEY123")
 check("build dengan sitekey sukses", rc == 0, log[-200:])

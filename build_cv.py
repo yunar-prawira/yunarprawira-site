@@ -30,18 +30,18 @@ PLACEHOLDER_SITEKEY = "0x4AAAAAAA_PLACEHOLDER"
 GATE_FORM_MARKER = "<!--GATE:FORM-->"
 GATE_BEGIN = "<!--GATE:BEGIN-->"
 GATE_END = "<!--GATE:END-->"
-GATE_MAILTO_ONLY = """<section class="cvgate" aria-labelledby="cvgate-title">
-  <h2 id="cvgate-title">Minta CV lengkap</h2>
+GATE_MAILTO_ONLY = """  <h2 id="cvgate-title">Minta CV lengkap</h2>
   <p class="cvgate-note">CV lengkap saya kirim lewat email, tanpa nomor telepon di dalamnya.
   Tulis satu baris saja — siapa Anda dan untuk peran apa.</p>
-  <p><a class="cvgate-cta" href="mailto:mail@yunarprawira.com?subject=Permintaan%20CV%20lengkap">Minta CV lengkap lewat email</a></p>
-</section>"""
+  <p><a class="cvgate-cta" href="mailto:mail@yunarprawira.com?subject=Permintaan%20CV%20lengkap">Minta CV lengkap lewat email</a></p>"""
 
 
 def swap_gate(page: str, use_form: bool) -> str:
-    """Ganti seluruh blok antara GATE_BEGIN..GATE_END dengan bentuk yang sesuai.
+    """Ganti isi antara GATE_BEGIN..GATE_END dengan bentuk yang sesuai.
 
-    Dipisah sebagai fungsi supaya bisa diuji tanpa menjalankan build penuh.
+    Penanda berada DI DALAM pembungkus <section>, jadi penggantinya hanya isi:
+    menyertakan <section> lagi menghasilkan landmark bersarang (axe
+    landmark-unique). Dipisah sebagai fungsi supaya bisa diuji tanpa build.
     """
     start = page.find(GATE_BEGIN)
     end = page.find(GATE_END)
@@ -237,16 +237,16 @@ footer a{min-height:44px;display:inline-flex;align-items:center}
 </head>
 <body>
 
-<div class="masthead">
+<header class="masthead">
   <div class="wrap">
     <span class="who">Yunar Prawira · Jakarta</span>
-    <nav>
+    <nav aria-label="Navigasi utama">
       <a href="../">Beranda</a>
       <a href="https://linkedin.com/in/yunarprawira">LinkedIn</a>
       <a href="mailto:mail@yunarprawira.com">Email</a>
     </nav>
   </div>
-</div>
+</header>
 
 <main class="wrap">
 {{BODY}}
