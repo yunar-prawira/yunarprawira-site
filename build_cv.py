@@ -127,7 +127,8 @@ a{color:inherit;text-decoration:none}
   text-transform:uppercase;color:var(--muted)}
 .masthead nav{margin-left:auto;display:flex;gap:var(--s4);font-family:var(--mono);
   font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.masthead nav a{color:var(--muted);display:inline-flex;align-items:center;min-height:44px}
+.masthead nav a{color:var(--muted);display:inline-flex;align-items:center;min-height:44px;
+  word-break:normal;white-space:nowrap}
 .masthead nav a:hover{color:var(--ink)}
 main{padding:var(--s16) 0 var(--s12)}
 h1.nama{font-family:var(--display);font-weight:400;font-size:40px;line-height:1.05;
